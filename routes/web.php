@@ -38,3 +38,7 @@ Route::get('/user/{id?}', function () {
 Route::get('/carrito/{id?}', function () {
     return view('miCarrito');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
