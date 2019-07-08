@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,14 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      $products = Product::all(); //Traemos todos los productos.
-      return view('products', compact('products'));
-    }
-
-    public function show($id)
-    {
-      $product = Product::find($id); //Identificamos el producto que queremos mostrar.
-      return view('product', compact('product')); //Pasamos el dato a la vista.
+        //
     }
 
     /**
@@ -48,17 +41,21 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
+    public function show(Category $category)
+    {
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Category $category)
     {
         //
     }
@@ -67,10 +64,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -78,10 +75,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Category $category)
     {
         //
     }

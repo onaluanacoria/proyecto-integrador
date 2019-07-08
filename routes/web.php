@@ -13,8 +13,13 @@
 
 
 Route::get('/', 'PagesController@index')->name('home');
+Route::get('/products', 'ProductController@index');
+Route::get('/product/{id}', 'ProductController@show'); //Mostramos 1 producto
+Route::get('/cart', 'CartController@index'); //Mostramos el carrito abierto.
+Route::post('/addtocart', 'CartController@store'); //Guardamos productos en tabla cart.
+Route::get('/delete/{id}', 'CartController@destroy'); //Borramos productos del carrito.
 
-Route::get('/register/{id?}', 'PagesController@register')->name('registro');
+
 
 Route::get('/login', 'PagesController@login')->name('login');
 
