@@ -1,0 +1,53 @@
+.btn-link {
+  font-weight: 400;
+  color: #1a2735;
+  text-decoration: none;
+}
+
+button.btn {
+  color: black;
+}
+
+.card-header {
+  border: 1px solid grey;
+}
+
+.card-header#headingOne {
+  background-color: rgba(229, 190, 221);
+}
+
+.card-header#headingTwo {
+  background-color: rgba(160, 217, 149);
+}
+
+.card-header#headingThree {
+  background-color: rgba(181, 220, 249);
+}
+
+.card-header#headingFour {
+  background-color: rgba(255, 168, 184);
+}
+
+.card-header#headingFive {
+  background-color: rgba(220, 217, 248);
+}
+
+.card-header#headingSix {
+  background-color: rgba(250, 225, 135);
+}
+
+.card-header#headingSeven {
+  background-color: rgba(162, 237, 206);
+}
+
+.card-header#headingEight {
+  background-color: rgba(232, 186, 134);
+}
+
+.card-header#headingNine {
+  background-color: rgba(255, 200, 195);
+}
+
+.card-header#headingTen {
+  background-color: rgba(188, 206, 244);
+}

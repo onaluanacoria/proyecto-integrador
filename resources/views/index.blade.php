@@ -292,7 +292,7 @@ padding: 5%;
 }
   </style>
 
-  
+
   <div class="container-fluid part-one">
   <div class="banner">
     <video autoplay muted loop>
@@ -323,7 +323,7 @@ padding: 5%;
         <section class="row">
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="./img/gastronomia.jpg" alt="Card image cap">
+      <img class="card-img-top" src="categories\gastronomia.jpg" alt="Card image cap">
       <div class="card-body gastronomia">
             <a href="#" class="btn btn-primary">Gastronomia</a>
       </div>

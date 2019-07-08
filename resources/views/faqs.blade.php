@@ -2,6 +2,9 @@
 
 @section('principal')
 
+<link rel="stylesheet" href=  "{{asset('css/faqs.css')}}"/>
+
+
   <div class="container">
 
     <div class="accordion" id="accordionExample">

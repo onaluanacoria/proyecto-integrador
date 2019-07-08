@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Bitter', serif;
+  font-family: 'Lobster', serif;
+  font-family: 'Playfair Display', serif;
+}
+
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 49px;
+}
+
+.registro {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.recuperar-contraseña {
+  padding-top: 20px;
+  padding-left: 77px;
+}
+
+.recuperar-contraseña a {
+  font-size: 18px;
+  color: violet;
+}

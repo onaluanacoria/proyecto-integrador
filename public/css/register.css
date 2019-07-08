@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  font-family: 'Bitter', serif;
+  font-family: 'Lobster', cursive;
+  font-family: 'Playfair Display', serif;
+}
+
+.container-form-registro {
+  padding-top: 15%;
+}
+
+h1 {
+  padding-left: 10%;
+  padding-bottom: 5%;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  background-color: #f17288;
+}
+
+input[type="radio"] {
+  width: 30px;
+}
+
+button[type="submit"] {
+  outline: none;
+  border: 0px;
+  background-color: #66d7d1;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2em;
+}
+
+.form-group {
+  margin-bottom: 0rem;
+}
+
+.botton-form-group {
+  padding-left: 70px;
+  padding-top: 15px;
+}
+
+.form-group-file {
+  padding-left: 45px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+.select {
+  display: inline-flex;
+  border: 2px solid #ccc;
+  height: 35px;
+  background-color: #fff;
+}
+
+.select select {
+  font-weight: bold;
+  align-items: center;
+  padding: 5px 8px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  appearance: none;
+}
+
+.calen-form-group {
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px
+}
+
+.form-check-inline {
+  padding-left: 50px;
+}
+
+.terminosycondiciones {
+  padding-top: 5px;
+}
+
+.ingreso-directo a {
+  color: rgb(166, 56, 171);
+  font-weight: bold;
+}
+
+.ingreso-directo span {
+  padding-bottom: 12%;
+}
+
+label.genero-label {
+  font-size: 20px;
+}
+
+span.error-form {
+  color: red;
+  font-style: italic;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .calen-form-group {
+    padding-right: 10%;
+  }
+
+  .calen-form {
+    padding-bottom: 15px;
+  }
+
+  .form-group-file {
+    padding-right: 10%;
+  }
+
+  select.select {
+    padding: 0;
+  }
+
+  form.form {
+    padding-left: 14%;
+  }
+
+  .terminosycondiciones {
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .form-check-inline {
+    padding-left: 0 !important;
+  }
+
+  .botton-form-group {
+    padding-left: 10%
+  }
+
+  .ingreso-directo {
+    padding-top: 3%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .terminosycondiciones {
+    padding-top: 15px;
+    text-align: center;
+    padding-left: 2%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width:768px) {
+  .terminosycondiciones {
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .ingreso-directo {
+    text-align: center;
+  }
+}
+
+/*
+.caja-select{
+  display: flex;
+  justify-content: space-around;
+  max-width: 403px;
+}
+
+.select {
+  display: inline-flex;
+  border: 2px solid #ccc;
+  height: 35px;
+  background-color: #fff;
+}
+
+.select:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #000000 transparent transparent transparent;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.select select {
+    font-weight: bold;
+    align-items: center;
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    appearance: none;
+}
+
+.ingreso-directo{
+  text-align: center;
+  padding-top: 15px;
+}
+
+.ingreso-directo a{
+    color:#ff637d;
+}
+
+a{
+  text-decoration: none;
+  color: #957DAD;
+  font-weight: bold;
+}
+
+
+/*
+@media screen and (min-width:450px) and (max-width:872px) {
+        .formulario-view{
+          width: 100%;
+        }
+        section#formulario{
+          float: none;
+        }
+
+        .form-control{
+        justify-content: center;
+        padding-left: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="password"]{
+          width: 80%;
+        }
+        .caja-select{
+          max-width: 85%;
+        }
+        input[type="submit"]{
+          width: 80%;
+        }
+        h1{
+        padding-right: 12%;
+        }
+        h3{
+        padding-right: 16%;
+        }
+}
+@media only screen and (min-width:872px){
+      .container{
+        max-width: 1200px;
+      }
+
+      .foto-registro-izq{
+        display: inline-block;
+        width: 49%;
+      }
+
+} */
+*/

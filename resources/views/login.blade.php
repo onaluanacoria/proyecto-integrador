@@ -1,6 +1,9 @@
 @extends('plantilla')
 
 @section('principal')
+
+<link rel="stylesheet" href=  "{{asset('css/login.css')}}"/>
+
   <div class="container d-flex justify-content-center">
 
     <form class="form" action="" method="post" enctype="multipart/form-data">
