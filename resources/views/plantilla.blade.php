@@ -70,10 +70,10 @@
           <a href="{{route('categorias')}}"><span class="icon-plus"></span> Categorias</a>
         </li>
         <li class="nav-item">
-          <a href="{{route('register')}}"><span class="icon-user-plus"></span> Registro</a>
+          <a href=""><span class="icon-user-plus"></span> Registro</a>
         </li>
         <li class="nav-item">
-          <a href="{{route('login')}}" ><span class="icon-key2"></span>Login</a>
+          <a href="" ><span class="icon-key2"></span>Login</a>
         </li>
         <li class="nav-item">
           <a href="{{route('FQaA')}}"><span class="icon-point-right"></span>FQaA</a>

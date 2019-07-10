@@ -20,8 +20,7 @@ Route::post('/addtocart', 'CartController@store'); //Guardamos productos en tabl
 Route::get('/delete/{id}', 'CartController@destroy'); //Borramos productos del carrito.
 
 
-Route::get('/register', 'PagesController@register')->name('register');
-Route::get('/login', 'PagesController@login')->name('login');
+
 
 Route::get('/aboutUs/{nombre?}', function ($nombre = null) {
     $equipo = ['Ona Coria', 'Eric Rago', 'Francisco Ochandorena', 'Javier Ter?'];
@@ -37,7 +36,6 @@ Route::get('/regalo/{id?}', function () {
 });
 
 
-
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
