@@ -15,8 +15,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+     // agregamos los campos que deseamos que se escriban en base de datos (en este caso last_name)
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'last_name'
     ];
 
     /**
