@@ -16,6 +16,12 @@ class CartController extends Controller
      */
     public function index()
     {
+      // ponemos un filtro si el usuario esta logueado
+
+      $usuarioLog = Auth::user();
+      if ($usuarioLog == null) {
+        return redirect(),
+      } else {
       $carts = Cart::where('status',0)
       ->where('user_id', Auth::user()->id)
       ->get(); //Identificamos todos los items de los carritos abiertos del usuario logueado.
@@ -26,7 +32,7 @@ class CartController extends Controller
         }
 
       return view('cart', compact('carts', 'total'));
-
+      }
     }
 
     /**
@@ -47,6 +53,12 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
+        // ponemos un filtro si el usuario esta logueado
+        $usuarioLog = Auth::user();
+          if ($usuarioLog == null) {
+            return redirect(),
+          } else {
+
         $product = Product::find($request->id);
 
         $cart = new Cart; //Recordar que cada Cart es un item dentro del carrito.
@@ -57,7 +69,7 @@ class CartController extends Controller
 
         $cart->save();
         return redirect('/products');
-
+      }
     }
 
     /**
@@ -117,5 +129,5 @@ class CartController extends Controller
 
           return redirect('/cart');
       }
-  
+
 }
