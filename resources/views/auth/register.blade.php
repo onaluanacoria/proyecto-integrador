@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+
+
 <link rel="stylesheet" href=  "{{asset('css/register.css')}}"/>
 
 @section('content')
@@ -126,4 +128,5 @@
         </div>
     </div>
 </div>
+
 @endsection

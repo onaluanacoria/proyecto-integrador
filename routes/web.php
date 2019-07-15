@@ -18,7 +18,10 @@ Route::get('/product/{id}', 'ProductController@show'); //Mostramos 1 producto
 Route::get('/cart', 'CartController@index'); //Mostramos el carrito abierto.
 Route::post('/addtocart', 'CartController@store'); //Guardamos productos en tabla cart.
 Route::get('/delete/{id}', 'CartController@destroy'); //Borramos productos del carrito.
-
+Route::get('/addgift', 'ProductController@create');//creamos productos
+Route::post('/addgift', 'ProductController@store');
+Route::get('/products/search','ProductController@search');//buscador
+Route::get('/deletegift/{id}','productController@destroy');//eliminamos productos
 
 
 

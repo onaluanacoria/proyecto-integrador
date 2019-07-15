@@ -31,7 +31,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('addgift');
     }
 
     /**
@@ -40,10 +40,58 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
-        //
+
+                  // //Primero valido los datos. //
+                  $reglas = [
+                    "name" => "required|string|min:2",
+                    // "name"=>"required|string|min:2",
+                    "description"=> "required|string",
+                    "price" => "required|integer",
+                    "featured_img" =>"image",
+                    // "categoria_id" => "integer",
+                  ];
+
+                  $mensajes = [
+                    "string" => "El campo :attribute  debe ser de texto.",
+                    // "name.string" => "El campo Nombre debe ser de texto.",
+                    "required" => "El campo :attribute debe completarse",
+                    "integer" => "El campo :attribute debe ser un numero entero.",
+                    "min" => "El campo debe :attribute tener como minimo :value caracteres",
+                    "max" => "El campo debe :attribute tener como maximo :value caracteres"
+                  ];
+
+                  $this->validate($req, $reglas, $mensajes);
+                  //Crear un nuevo objeto movie.
+                  $newGift = new Product();
+
+                  $path = $req->file('featured_img')->store('/public/products');
+                  $file = basename($path);
+                  //dd($path, $file);
+
+                //  Le voy a cargar los datos que vienen por post (request)
+                  $newGift->name = $req["name"];
+                  $newGift->description = $req["description"];
+                  $newGift->price = $req["price"];
+                  // $newGift->categoria_id = $req["categoria_id"];
+                  $newGift->featured_img = $file;
+                  // dd($req, $nuevaPelicula);
+                //  Guardo el objeto en la base de datos.
+
+                  $newGift->save();
+
+                  return redirect('/products');
     }
+    public function search(Request $req){
+      $searchData = '%'.$req["name"].'%';
+      $gifts = Product::where('name','like',$searchData)
+       ->orderBy('name')
+       ->get();
+
+      return view('products',compact('gifts'));
+    }
+
 
     /**
      * Display the specified resource.
@@ -81,8 +129,11 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $productdelete = Product::find($id);
+        $productdelete->delete();
+
+        return redirect('/products');
+      }
     }
-}

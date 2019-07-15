@@ -6,7 +6,7 @@ use App\Product;
 use Faker\Generator as Faker;
 
 $factory->define(Product::class, function (Faker $faker) {
-  $dir= storage_path('app/public/product');
+  $dir= storage_path('app\public\products');
     return [
       'name'=>$faker->word(3),
       'description'=>$faker->sentence(6),
