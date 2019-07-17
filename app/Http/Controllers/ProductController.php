@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -31,7 +32,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('addgift');
+        $categorias = Category::all();
+        return view('addgift', compact('categorias'));
     }
 
     /**
@@ -76,6 +78,7 @@ class ProductController extends Controller
                   $newGift->price = $req["price"];
                   // $newGift->categoria_id = $req["categoria_id"];
                   $newGift->featured_img = $file;
+                  $newGift->categoria_id = $req['categoria_id'];
                   // dd($req, $nuevaPelicula);
                 //  Guardo el objeto en la base de datos.
 

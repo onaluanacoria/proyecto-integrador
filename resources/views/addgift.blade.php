@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,7 +21,6 @@
         <div class="">
           <label for="name">Nombre</label>
           <input id="name" type="text" name="name" value="{{old("name")}}">
-          <small>{{$errors->first('name')}}</small>
         </div>
         <div class="">
           <label for="description">Descripcion</label>
@@ -34,10 +34,19 @@
         <label>Imagen</label>
         <input type="file" name="featured_img" value="">
         </div>
-        {{-- <div class="">
-          <label>categoria</label>
-          <input type="text" name="categoria_id" value="{{old("categoria_id")}}">
-        </div> --}}
+        <div class="">
+        <label>Categoria</label>
+        <select name="categoria_id">
+          @foreach ($categorias as $categoria)
+            <option value={{$categoria->id}}>{{$categoria->name}}</option>
+          @endforeach
+
+
+        </select>
+        </div>
+
+
+
         <div class="">
           <input type="submit" name="" value="Agregar Regalo">
         </div>

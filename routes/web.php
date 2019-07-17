@@ -23,6 +23,7 @@ Route::post('/addgift', 'ProductController@store');
 Route::get('/products/search','ProductController@search');//buscador
 Route::get('/deletegift/{id}','productController@destroy');//eliminamos productos
 
+Route::get('/categorias', 'CategoryController@index');
 
 
 Route::get('/aboutUs/{nombre?}', function ($nombre = null) {
