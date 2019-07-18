@@ -18,8 +18,8 @@ class CartController extends Controller
     {
       // ponemos un filtro si el usuario esta logueado
 
-      $usuarioLog = Auth::user();
-      if ($usuarioLog == null) {
+      $userLog = Auth::user();
+      if ($userLog == null) {
         return redirect(),
       } else {
       $carts = Cart::where('status',0)
@@ -54,8 +54,8 @@ class CartController extends Controller
     public function store(Request $request)
     {
         // ponemos un filtro si el usuario esta logueado
-        $usuarioLog = Auth::user();
-          if ($usuarioLog == null) {
+        $userLog = Auth::user();
+          if ($userLog == null) {
             return redirect(),
           } else {
 

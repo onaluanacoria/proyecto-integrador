@@ -21,6 +21,12 @@
         </form>
         <img src="/storage/product/{{$product->featured_img}}" alt="">
 
+        <form class="" action="/deletegift/{{$product->id}}" method="get">
+          {{-- <input type="hidden" name="id" value="{{$movie->id}}"> --}}
+          <input type="submit" name="" value="Borrar Regalo">
+          @csrf
+
+        </form>
       </article>
     </section>
 

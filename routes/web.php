@@ -23,7 +23,7 @@ Route::post('/addgift', 'ProductController@store');
 Route::get('/products/search','ProductController@search');//buscador
 Route::get('/deletegift/{id}','productController@destroy');//eliminamos productos
 
-Route::get('/categorias', 'CategoryController@index');
+Route::get('/categories', 'CategoryController@index')->name('categorias');
 
 
 Route::get('/aboutUs/{nombre?}', function ($nombre = null) {
@@ -33,11 +33,7 @@ Route::get('/aboutUs/{nombre?}', function ($nombre = null) {
 
 Route::get('/faqs', 'PagesController@fqaa')->name('FQaA');
 
-Route::get('/categorias/{id?}', 'PagesController@categorias')->name('categorias');
-
-Route::get('/regalo/{id?}', function () {
-    return view('productos');
-});
+Route::get('/categories/{id?}', 'PagesController@categorias')->name('categorias');
 
 
 Auth::routes();

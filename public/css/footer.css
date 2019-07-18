@@ -1,0 +1,65 @@
+footer {
+  padding-top: 5%;
+  height: 300px;
+}
+
+.footer {
+  border: 1px solid grey;
+  background-color: rgba(255, 168, 184, 0.8);
+}
+
+p.copyrights {
+  background-color: rgba(3, 217, 189);
+  padding: 10px 0;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-about {
+  text-align: center;
+}
+
+.footer-about h3 {
+  color: white;
+}
+
+.footer-about span {
+  font-family: 'Lobster', sans-serif;
+  color: black;
+}
+
+.footer-about p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.medios-pago {
+  text-align: center;
+}
+
+.medios-pago ul {
+  padding-right: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+.medios-pago li i {
+  color: white;
+  font-size: 35px;
+}
+
+.medios-pago span {
+  color: black;
+}
+
+.redes ul {
+  padding-left: 11px;
+}
+
+.redes li i {
+  color: white;
+  font-size: 35px;
+}
