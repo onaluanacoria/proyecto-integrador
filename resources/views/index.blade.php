@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('principal')
-  
+
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
 
   <div class="container-fluid part-one">
@@ -184,7 +184,7 @@
               <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </article>
           <div class="tell-me-more col-9 d-flex justify-content-center">
-              <button id="tell-me-more">Ver todos</button>
+              <button id="tell-me-more" role="link" onclick="window.location='/products'">Ver todos</button>
           </div>
       </section>
           <hr>

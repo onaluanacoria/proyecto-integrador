@@ -8,9 +8,9 @@
     <h1>Detalle del producto</h1>
     <section>
       <article>
-        <p>Nombre: {{$product->name}}</p>
-        <p>Descripción: {{$product->description}}</p>
-        <p>Precio: {{$product->price}}</p>
+        <p>{{$product->name}}</p>
+        <p>{{$product->description}}</p>
+        <p>{{$product->price}}</p>
         {{-- <p><a href="#">Comprar</a></p> --}}
         <form class="" action="/addtocart" method="post">
           @csrf
@@ -19,7 +19,7 @@
           <p></p>
           <button type="submit">Agregar al carrito</button>
         </form>
-        <img src="/storage/product/{{$product->featured_img}}" alt="">
+        <img src="/storage/products/{{$product->featured_img}}" alt="">
 
         <form class="" action="/deletegift/{{$product->id}}" method="get">
           {{-- <input type="hidden" name="id" value="{{$movie->id}}"> --}}

@@ -1,3 +1,6 @@
+@extends('plantilla')
+
+@section('principal')
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,7 +19,7 @@
 
 
     <div class="container part-three">
-       <h1 class="d-flex justify-content-center">Lo mas buscado</h1>
+       <h1 class="d-flex justify-content-center">Todos los regalos</h1>
           <section class="row section-products">
             @foreach ($products as $product)
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
@@ -35,3 +38,4 @@
 
   </body>
 </html>
+@endsection
