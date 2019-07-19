@@ -9,7 +9,7 @@ body{
  }
 .banner{
   width: 100%;
-  height: 100vh;
+  height: 69vh;
   overflow: hidden;
   display: flex;
   justify-content: flex-start;
@@ -287,4 +287,81 @@ height: auto;
 display: none;
 }
 }
-</style>
+
+/* formularios css */
+.addgift{
+  width: 50%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.addgift form{
+  padding-bottom: 7%;
+  padding-top: 4%;
+}
+.addgift h1{
+  font-family: 'Lobster', sans-serif;
+}
+.addgift form{
+  width: 50%;
+ position: relative;
+ right: 30%;
+}
+.addgift .form-group{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.addgift input {
+  display: flex;
+  align-items: flex-end;
+}
+.addgift input[type="text"] {
+  background-color: #f17288;
+  width: 157%;
+}
+.addgift #description{
+  height: 100px;
+}
+.addgift input[type="submit"] {
+
+  background-color: rgb(104, 125, 222);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+  font-family: 'Lobster', sans-serif;
+  height: 45px;
+  width: 300px;
+  position: relative;
+  left: 28%;
+  top: 20px;
+}
+
+
+.addgift select{
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  align-items: center;
+  width: 157%;
+  padding: 5px 8px;
+  /* border: none; */
+  /* box-shadow: none; */
+  /* background-color: transparent; */
+  /* appearance: none; */
+}
+.addgift label{
+  font-size: 20px;
+  font-family: 'Bitter', sans-serif;
+}
+.fondo{
+  background-image:url('../img/ingreso.jpg');
+  width: 50%;
+  height: 114%;
+  position: absolute;
+  top: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}

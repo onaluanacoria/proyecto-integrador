@@ -24,9 +24,13 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function create()
     {
-        //
+      $products = Product::all();
+      return view('categories', compact('products'));
     }
 
     /**
@@ -35,9 +39,42 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
-        //
+      // //Primero valido los datos. //
+      $reglas = [
+        "name" => "required|string|min:2",
+        "imgCategories" =>"image|require",
+        // "categoria_id" => "integer",
+      ];
+
+      $mensajes = [
+        "string" => "El campo :attribute  debe ser de texto.",
+        // "name.string" => "El campo Nombre debe ser de texto.",
+        "required" => "El campo :attribute debe completarse",
+        "min" => "El campo debe :attribute tener como minimo :value caracteres",
+
+      ];
+
+      $this->validate($req, $reglas, $mensajes);
+      //Crear un nuevo objeto movie.
+      $newCategory = new Category();
+
+      $path = $req->file('imgCategories')->store('/public/imgCategories');
+      $file = basename($path);
+      //dd($path, $file);
+
+    //  Le voy a cargar los datos que vienen por post (request)
+      $newCategory->name = $req["name"];
+      // $newGift->categoria_id = $req["categoria_id"];
+      $newCategory->imgCategories = $file;
+
+      // dd($req, $newCategory);
+    //  Guardo el objeto en la base de datos.
+
+      $newCategory->save();
+
+      return redirect('/categories');
     }
 
     /**
