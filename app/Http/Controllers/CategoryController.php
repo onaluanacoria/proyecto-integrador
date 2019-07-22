@@ -76,9 +76,10 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+      $category = Category::find($id); //Identificamos el producto que queremos mostrar.
+      return view('category', compact('category')); //Pasamos el dato a la vista.
     }
 
     /**
@@ -110,8 +111,11 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
-    {
-        //
-    }
+     public function destroy($id)
+     {
+         $categoryDelete = Category::find($id);
+         $categoryDelete->delete();
+
+         return redirect('/categories');
+       }
 }

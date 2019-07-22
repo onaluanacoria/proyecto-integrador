@@ -26,5 +26,5 @@
           {{"Esta vacio"}}
 
         @endforelse
-@dd($category);
+
 @endsection

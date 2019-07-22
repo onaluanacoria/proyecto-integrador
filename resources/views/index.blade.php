@@ -96,95 +96,27 @@
 </div>
 
 <div class="container part-three">
-          <h1 class="d-flex justify-content-center">Lo mas buscado</h1>
+   <h1 class="d-flex justify-content-center">Lo mas regalados</h1>
       <section class="row section-products">
+        @foreach ($bestRanking->masbuscados() as $product)
           <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
-              <img src="img/rosellBoher.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Rosell Boher Lodge</h3>
-              <h4>$34900</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
+                <img src="/storage/products/{{$product->featured_img}}" alt="">
+                <h4>{{$product->category->name}}</h4>
+                <h3>{{$product->name}}</h3>
+                <h4>${{$product->price}}</h4>
+                <h5>{{$product->description}}</h5>
+          <p><a href="/gift/{{$product->id}}">Ver más</a></p>
+        </article>
 
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/piedrasBlancas.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Estadia Piedras Blancas</h3>
-              <h4>$8.350</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/beauty.png" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Spa para 2 personas</h3>
-              <h4>$3.300</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/paracaidas.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Salto en Paracaídas</h3>
-              <h4>$6.700</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/cabalgata.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Cabalgata</h3>
-              <h4>$4.500</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/azurRealHotel.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Estadia en Azur Real Hotel</h3>
-              <h4>$8.900</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/alvearGrill.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Cena en Alvear Grill</h3>
-              <h4>$2.300</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/hotelHood.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Food in the Hood</h3>
-              <h4>$1.200</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/globo.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Vuelo en Globo</h3>
-              <h4>$7.600</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/cafayate.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Estadia Hotel Grace Cafayate</h3>
-              <h4>$5.900</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/fotografia.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Curso de fotografia</h3>
-              <h4>$1.700</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
-          <article class="col-9 col-md-6 col-lg-4">
-              <img src="img/corteyConfeccion.jpg" alt="">
-              <img class="carrito" src="./img/icono.carrito.png" alt="" height="10px" width="5px">
-              <h3>Curso de corte y confeccion</h3>
-              <h4>$34900</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </article>
+      @endforeach
+    </section>
+</div>
+
+
+
+
           <div class="tell-me-more col-9 d-flex justify-content-center">
-              <button id="tell-me-more" role="link" onclick="window.location='/products'">Ver todos</button>
+              <button id="tell-me-more" role="link" onclick="window.location='/gifts'">Ver todos</button>
           </div>
       </section>
           <hr>

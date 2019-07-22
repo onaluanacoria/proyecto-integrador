@@ -16,13 +16,13 @@ class ProductController extends Controller
     public function index()
     {
       $products = Product::all(); //Traemos todos los productos.
-      return view('products', compact('products'));
+      return view('gifts', compact('products'));
     }
 
     public function show($id)
     {
       $product = Product::find($id); //Identificamos el producto que queremos mostrar.
-      return view('product', compact('product')); //Pasamos el dato a la vista.
+      return view('gift', compact('product')); //Pasamos el dato a la vista.
     }
 
     /**
@@ -84,17 +84,23 @@ class ProductController extends Controller
 
                   $newGift->save();
 
-                  return redirect('/products');
+                  return redirect('/gifts');
     }
     public function search(Request $req){
       $searchData = '%'.$req["name"].'%';
-      $gifts = Product::where('name','like',$searchData)
-       ->orderBy('name')
+      $products = Product::where('name','like', $searchData)
        ->get();
 
-      return view('products',compact('gifts'));
+      return view('gifts',compact('products'));
     }
 
+    public function masbuscados()
+    {
+        $bestRanking = Product::where('rating', '>', "7");
+        // dd($arrayAsoc);
+        // dd(view('actor')->with('actor', $actor));
+        return view('index',compact('bestRanking'));
+    }
 
     /**
      * Display the specified resource.
@@ -137,6 +143,6 @@ class ProductController extends Controller
         $productDelete = Product::find($id);
         $productDelete->delete();
 
-        return redirect('/products');
+        return redirect('/gifts');
       }
     }

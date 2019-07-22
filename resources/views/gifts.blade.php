@@ -1,10 +1,7 @@
 @extends('plantilla')
 
 @section('principal')
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+
     <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
     <title></title>
   </head>
@@ -12,7 +9,7 @@
   <body>
 
 
-    <form class="" action="/products/search" method="get">
+    <form class="" action="/gifts/search" method="get">
       <input type="text" name="name" value="">
       <input type="submit" name="" value="Buscar Regalo">
     </form>
@@ -23,18 +20,18 @@
           <section class="row section-products">
             @foreach ($products as $product)
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
+                    <h2>{{$product->category->name}}</h2>
                     <img src="/storage/products/{{$product->featured_img}}" alt="">
-                    <h4>{{$product->category->name}}</h4>
                     <h3>{{$product->name}}</h3>
                     <h4>${{$product->price}}</h4>
                     <h5>{{$product->description}}</h5>
-              <p><a href="/product/{{$product->id}}">Ver más</a></p>
+              <p><a href="/gift/{{$product->id}}">Ver más</a></p>
             </article>
 
           @endforeach
         </section>
     </div>
-      </div>
+
 
   </body>
 </html>
