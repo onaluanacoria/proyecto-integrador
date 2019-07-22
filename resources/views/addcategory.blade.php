@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Agregar Categoria</h1>
+@extends('plantilla')
+
+@section('principal')
+
+  <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
+
+<div class="container d-flex justify-content-center">
+  <div class="addcategory d-flex justify-content-center">
+
       <ul>
       @foreach ($errors->all() as $error)
         <li>
@@ -14,24 +15,25 @@
       @endforeach
       </ul>
 
-      <form class="" action="/addcategory" method="post" enctype="multipart/form-data">
-         @csrf {{-- ES OBLIGATORIO PARA FORMS METHOD POST --}}
-        {{-- {{csrf_field()}} --}}
-        <div class="">
+      <form class="form-addcategory" action="/addcategory" method="post" enctype="multipart/form-data">
+        <h1>Agregar Categoria</h1>
+         @csrf
+        <div class="form-group">
           <label for="name">Nombre</label>
           <input id="name" type="text" name="name" value="{{old("name")}}">
         </div>
 
-        <div class="">
+        <div class="form-group">
         <label>Portada</label>
         <input type="file" name="imgCategories" value="">
         </div>
 
-
-        <div class="">
+        <div class="submit-form">
           <input type="submit" name="" value="Agregar Categoria">
         </div>
       </form>
+  </div>
 
-  </body>
-</html>
+      <div class="fondo-add-category">    </div>
+</div>
+@endsection

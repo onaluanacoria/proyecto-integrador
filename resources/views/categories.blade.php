@@ -2,7 +2,7 @@
 
 @section('principal')
 
-@endsection
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,24 +13,18 @@
     Categorias
     <ul>
 
-
       @forelse ($categories as $category)
         <li>{{$category->name}}</li>
 
-
+{{--
         <ul>
 
         @forelse ($category->name as $vuelta)
           <li>{{$vuelta->name}}</li>
             {{-- <li>{{$id->name}}</li> --}}
         @empty
+          {{"Esta vacio"}}
 
         @endforelse
-      </ul>
-      @empty
-
-      @endforelse
-    </ul>
-
-  </body>
-</html>
+@dd($category);
+@endsection

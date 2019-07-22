@@ -51,7 +51,7 @@
         </form>
     </div>
 
-    <div class="fondo">    </div>
+    <div class="fondo-add-gift">    </div>
   </div>
 
 

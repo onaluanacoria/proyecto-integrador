@@ -289,6 +289,7 @@ display: none;
 }
 
 /* formularios css */
+
 .addgift{
   width: 50%;
   max-width: 600px;
@@ -324,7 +325,6 @@ display: none;
   height: 100px;
 }
 .addgift input[type="submit"] {
-
   background-color: rgb(104, 125, 222);
   border-radius: 5px;
   padding: 5px;
@@ -354,7 +354,7 @@ display: none;
   font-size: 20px;
   font-family: 'Bitter', sans-serif;
 }
-.fondo{
+.fondo-add-gift{
   background-image:url('../img/ingreso.jpg');
   width: 50%;
   height: 114%;
@@ -365,3 +365,48 @@ display: none;
   background-repeat: no-repeat;
 
 }
+/* Css de addcategory */
+
+  .addcategory{
+    padding-top: 3%;
+    padding-bottom: 7%;
+    max-width: 600px;
+
+    /* margin-left: auto;
+    margin-right: 0; */
+  }
+  .addcategory form{
+   position: relative;
+   right: 25%;
+  }
+  .addcategory .form-group{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .addcategory h1{
+    font-family: 'Lobster', sans-serif;
+  }
+  .addcategory input {
+    display: flex;
+    align-items: flex-end;
+  }
+  .addcategory input[type="text"] {
+    background-color: #f17288;
+    width: 130%;
+  }
+  .addcategory label{
+    font-size: 20px;
+    font-family: 'Bitter', sans-serif;
+  }
+  .addcategory input[type="submit"] {
+    background-color: rgb(104, 125, 222);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Lobster', sans-serif;
+    height: 45px;
+    width: 300px;
+    position: relative;
+    left: 25%;
+    top: 20px;
+  }
