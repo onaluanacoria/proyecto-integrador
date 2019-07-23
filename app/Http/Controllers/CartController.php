@@ -20,7 +20,7 @@ class CartController extends Controller
 
       $userLog = Auth::user();
       if ($userLog == null) {
-        return redirect(),
+        return redirect();
       } else {
       $carts = Cart::where('status',0)
       ->where('user_id', Auth::user()->id)
@@ -56,7 +56,7 @@ class CartController extends Controller
         // ponemos un filtro si el usuario esta logueado
         $userLog = Auth::user();
           if ($userLog == null) {
-            return redirect(),
+            return redirect();
           } else {
 
         $product = Product::find($request->id);

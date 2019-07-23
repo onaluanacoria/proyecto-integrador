@@ -12,8 +12,8 @@
 */
 
 
-Route::get('/', 'PagesController@index')->name('home');
-Route::get('/','ProductController@masbuscados');
+Route::get('/', 'ProductController@giftindex')->name('home');
+
 
 
 Route::get('/gifts', 'ProductController@index');

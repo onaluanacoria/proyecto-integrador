@@ -3,6 +3,7 @@
 @section('principal')
 
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
+  <script type="text/javascript" src="{{asset('js/giftcompany.js')}}"></script>
 
   <div class="container-fluid part-one">
   <div class="banner">
@@ -44,7 +45,7 @@
             <div class="card" style="">
       <img class="card-img-top" src="img/entretenimiento.jpg" alt="Card image cap">
       <div class="card-body entretenimiento">
-            <a href="#" class="btn btn-primary">entretenimiento</a>
+            <a href="#" class="btn btn-primary">Entretenimiento</a>
       </div>
     </div>
           </article>
@@ -96,16 +97,17 @@
 </div>
 
 <div class="container part-three">
-   <h1 class="d-flex justify-content-center">Lo mas regalados</h1>
+
+   <h1 class="d-flex justify-content-center">Lo mas regalados<img class="ranking "src="img/podio.png" alt=""></h1>
       <section class="row section-products">
-        @foreach ($bestRanking->masbuscados() as $product)
+        @foreach ($products as $product)
           <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
+                <h2>{{$product->category->name}}</h2>
                 <img src="/storage/products/{{$product->featured_img}}" alt="">
-                <h4>{{$product->category->name}}</h4>
                 <h3>{{$product->name}}</h3>
                 <h4>${{$product->price}}</h4>
                 <h5>{{$product->description}}</h5>
-          <p><a href="/gift/{{$product->id}}">Ver más</a></p>
+          <a href="/gift/{{$product->id}}">Ver más</a>
         </article>
 
       @endforeach

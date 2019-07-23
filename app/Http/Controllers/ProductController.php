@@ -13,6 +13,12 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function giftindex()
+    {
+      $products = Product::where('rating', '>', "7")->get(); //Traemos todos los productos.
+      return view('index', compact('products'));
+    }
+
     public function index()
     {
       $products = Product::all(); //Traemos todos los productos.
@@ -94,13 +100,13 @@ class ProductController extends Controller
       return view('gifts',compact('products'));
     }
 
-    public function masbuscados()
-    {
-        $bestRanking = Product::where('rating', '>', "7");
-        // dd($arrayAsoc);
-        // dd(view('actor')->with('actor', $actor));
-        return view('index',compact('bestRanking'));
-    }
+    // public function masbuscados()
+    // {
+    //     $bestRanking = Product::where('rating', '>', "7");
+    //     // dd($arrayAsoc);
+    //     // dd(view('actor')->with('actor', $actor));
+    //     return view('index',compact('bestRanking'));
+    // }
 
     /**
      * Display the specified resource.

@@ -16,7 +16,8 @@
       </ul>
 
       <form class="form-addcategory" action="/addcategory" method="post" enctype="multipart/form-data">
-        <h1>Agregar Categoria</h1>
+        <h1>Agregar Categoria <img class="lista"src="img/lista.png" alt=""></h1>
+
          @csrf
         <div class="form-group">
           <label for="name">Nombre</label>
@@ -34,6 +35,6 @@
       </form>
   </div>
 
-      <div class="fondo-add-category">    </div>
+
 </div>
 @endsection
