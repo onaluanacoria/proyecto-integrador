@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href=  "{{asset('css/register.css')}}"/>
 
-  <div class="container-form-registro d-flex justify-content-center">
+  <div class="container-form-registro d-flex justify-content-end">
     <form class="form" action="" method="post" enctype="multipart/form-data">
       <h1>Registrate Acá!</h1>
       <div class="form-group row">

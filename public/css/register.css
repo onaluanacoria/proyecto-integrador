@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Lobster|Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Ranga&display=swap');
 * {
   padding: 0;
   font-family: 'Bitter', serif;
   font-family: 'Lobster', cursive;
   font-family: 'Playfair Display', serif;
+}
+
+.card{
+  position: relative;
+  top:4%;
+}
+.fondo-register {
+background-image:url('../img/ingreso.jpg');
+width: 50%;
+height: 720px;
+background-repeat: no-repeat;
 }
 
 .container-form-registro {
@@ -23,12 +37,24 @@ input[type="radio"] {
 }
 
 button[type="submit"] {
-  outline: none;
-  border: 0px;
-  background-color: #66d7d1;
-  border-radius: 5px;
-  color: white;
-  font-size: 1.2em;
+    background-color: rgb(104, 125, 222);
+    color: black;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 17px;
+    font-family: 'Lobster', sans-serif;
+    height: 40px;
+    width: 250px;
+    position: relative;
+    left: -17%;
+}
+.form-group label{
+  font-size: 15px;
+  font-family: 'Bitter', sans-serif;
+}
+.card-body h1{
+  font-family: 'Lobster', sans-serif;
 }
 
 .form-group {
@@ -73,8 +99,9 @@ button[type="submit"] {
   padding-left: 50px;
 }
 
-.terminosycondiciones {
-  padding-top: 5px;
+.ingreso-directo {
+  display: flex;
+  justify-content: center;
 }
 
 .ingreso-directo a {
@@ -95,6 +122,10 @@ span.error-form {
   font-style: italic;
   text-align: center;
   padding: 5px;
+}
+.terminosycondiciones{
+  position: relative;
+  left: 20%;
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -10,15 +10,14 @@
 
 <div class="container-fluid gifts">
   <form class="gift-search" action="/gifts/search" method="get">
-    <input type="text" name="name" value="">
     <input type="submit" name="" value="Buscar Regalo">
+    <input type="text" name="name" value="">
   </form>
-
 </div>
 
 
     <div class="container part-three">
-       <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts "src="img/regalo2.png" alt=""></h1>
+       <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts"src="img/regaloAll.png" alt=""></h1>
           <section class="row section-products allgifts">
             @foreach ($products as $product)
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
