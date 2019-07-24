@@ -10,7 +10,7 @@
             <div class="card">
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                      <h1>Registrate Acá</h1>
+                      <h1>Registrate Acá  <img class="user" src="img/usuario.png" alt=""> </h1>
                         @csrf
 
                         <div class="form-group row">

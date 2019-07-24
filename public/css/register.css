@@ -10,14 +10,15 @@
 
 .card{
   position: relative;
-  top:4%;
+
 }
 .fondo-register {
 background-image:url('../img/ingreso.jpg');
 width: 50%;
-height: 720px;
+height: 781px;
 background-repeat: no-repeat;
 }
+
 
 .container-form-registro {
   padding-top: 15%;
@@ -27,7 +28,13 @@ h1 {
   padding-left: 10%;
   padding-bottom: 5%;
 }
-
+img.user{
+  width: 42px;
+  height: 40px;
+  position: relative;
+  left: 2%;
+  bottom: 0.4pc
+}
 input[type="text"], input[type="email"], input[type="password"] {
   background-color: #f17288;
 }
@@ -49,6 +56,10 @@ button[type="submit"] {
     position: relative;
     left: -17%;
 }
+.form-group button[type="submit"] {
+  left: 0;
+
+}
 .form-group label{
   font-size: 15px;
   font-family: 'Bitter', sans-serif;
@@ -59,8 +70,24 @@ button[type="submit"] {
 
 .form-group {
   margin-bottom: 0rem;
+  padding-top: 3%;
 }
-
+.card-body {
+  padding-bottom: 15%;
+}
+.form-check-label{
+  font-family: 'Playfair Display', serif;
+  color: #3490dc;
+  text-decoration: none;
+  background-color: transparent;
+}
+.forgetPass{
+  color: rgb(166, 56, 171);
+  font-weight: bold;
+  position: absolute;
+  top: 165%;
+  left: 10%;
+}
 .botton-form-group {
   padding-left: 70px;
   padding-top: 15px;
