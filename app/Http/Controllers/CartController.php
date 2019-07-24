@@ -18,22 +18,22 @@ class CartController extends Controller
     {
       // ponemos un filtro si el usuario esta logueado
 
-      $userLog = Auth::user();
-      if ($userLog == null) {
-        return redirect();
-      } else {
+      // $userLog = Auth::user();
+      // if ($userLog == null) {
+      //   return redirect();
+      // } else {
       $carts = Cart::where('status',0)
-      ->where('user_id', Auth::user()->id)
+      ->where('user_id', Auth::id())
       ->get(); //Identificamos todos los items de los carritos abiertos del usuario logueado.
 
       $total = 0;
       foreach ($carts as $item) {
         $total = $total +($item->quantity * $item->price);
-        }
 
       return view('cart', compact('carts', 'total'));
-      }
+
     }
+  }
 
     /**
      * Show the form for creating a new resource.
@@ -54,10 +54,10 @@ class CartController extends Controller
     public function store(Request $request)
     {
         // ponemos un filtro si el usuario esta logueado
-        $userLog = Auth::user();
-          if ($userLog == null) {
-            return redirect();
-          } else {
+        // $userLog = Auth::user();
+        //   if ($userLog == null) {
+        //     return redirect();
+        //   } else {
 
         $product = Product::find($request->id);
 
@@ -65,14 +65,12 @@ class CartController extends Controller
         $cart->name = $product->name;
         $cart->price = $product->price;
         $cart->quantity = $request->quantity;
-        $cart->user_id = Auth::user()->id;
+        $cart->user_id = Auth::id();
 
         $cart->save();
-        return redirect('/products');
+        return redirect('/gifts');
       }
-    }
-
-    /**
+        /**
      * Display the specified resource.
      *
      * @param  \App\Cart  $cart
@@ -116,7 +114,7 @@ class CartController extends Controller
       public function destroy($id)
       {
           $item = Cart::where('id',$id)
-          ->where('user_id',Auth::user()->id)
+          ->where('user_id',Auth::id())
           ->where('status',0)->get(); //La consulta nos devuelve un array de datos con 1 solo item.
 
           $item[0]->delete(); //El item está en la posición 0 del array. Lo eliminamos.

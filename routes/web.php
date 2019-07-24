@@ -26,7 +26,10 @@ Route::get('/delete/{id}', 'CartController@destroy'); //Borramos productos del c
 Route::get('/addgift', 'ProductController@create');//creamos productos
 Route::post('/addgift', 'ProductController@store');//
 Route::get('/gifts/search','ProductController@search');//buscador
+Route::get('/editgift/{id}','ProductController@showform');
+Route::post('/editgift/{id}','ProductController@edit');
 Route::get('/deletegift/{id}','ProductController@destroy');//eliminamos productos
+
 
 Route::get('/categories', 'CategoryController@index');
 Route::get('/category/{id}', 'CategoryController@show'); //Mostramos 1 producto

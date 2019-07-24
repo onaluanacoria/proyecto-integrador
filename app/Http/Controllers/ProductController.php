@@ -114,16 +114,47 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-
+     public function showform($id) {
+       $product = Product::find($id); //Identificamos el producto que queremos mostrar.
+       $categorias = Category::all();
+       return view('editGift', compact('product', 'categorias')); //Pasamos el dato a la vista.
+     }
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Request $req)
     {
-        //
+
+      $reglas = [
+        "name" => "required|string|min:2",
+        // "name"=>"required|string|min:2",
+        "description"=> "required|string",
+        "price" => "required|integer",
+        "featured_img" =>"image",
+        // "categoria_id" => "integer",
+      ];
+
+      $mensajes = [
+        "string" => "El campo :attribute  debe ser de texto.",
+        // "name.string" => "El campo Nombre debe ser de texto.",
+        "required" => "El campo :attribute debe completarse",
+        "integer" => "El campo :attribute debe ser un numero entero.",
+        "min" => "El campo debe :attribute tener como minimo :value caracteres",
+        "max" => "El campo debe :attribute tener como maximo :value caracteres"
+      ];
+
+      $this->validate($req, $reglas, $mensajes);
+
+      $productEdit = Product::find($id);
+      $productEdit->name = $req["name"];
+      $productEdit->description = $req["description"];
+      $productEdit->price = $req["price"];
+      $productEdit->categoria_id = $req['categoria_id'];
+      $productEdit->save();
+      return view('gift', compact('productEdit'));
     }
 
     /**

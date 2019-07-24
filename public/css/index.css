@@ -364,10 +364,11 @@ display: none;
 /* FORMULARIOS DE ADDS */
 
 .addgift{
-  width: 50%;
+  width: 98%;
   max-width: 600px;
   margin-left: auto;
   margin-right: 0;
+  position: relative;
 }
 
 .addgift form{
@@ -439,7 +440,7 @@ img.lista{
 .fondo-add-gift{
   background-image:url('../img/ingreso.jpg');
   width: 50%;
-  height: 123%;
+  height: 749px;
   position: absolute;
   top: 10px;
   overflow: hidden;

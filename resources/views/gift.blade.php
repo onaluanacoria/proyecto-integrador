@@ -21,10 +21,17 @@
         </form>
         <img src="/storage/products/{{$product->featured_img}}" alt="">
 
-        <form class="" action="/deletegift/{{$product->id}}" method="get">
+        <form class="" action="/editgift/{{$product->id}}" method="get">
           {{-- <input type="hidden" name="id" value="{{$movie->id}}"> --}}
-          <input type="submit" name="" value="Borrar Regalo">
           @csrf
+          <input type="submit" name="" value="Editar">
+
+          </form>
+
+          <form class="" action="/deletegift/{{$product->id}}" method="get">
+            {{-- <input type="hidden" name="id" value="{{$movie->id}}"> --}}
+            <input type="submit" name="" value="Borrar Regalo">
+            @csrf
 
         </form>
       </article>
