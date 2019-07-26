@@ -5,7 +5,10 @@
 body{
   margin: 0;
   padding: 0;
-  height: 1000px;
+  height: auto;
+ }
+ .container.d-flex{
+   padding-bottom: 5%;
  }
 .banner{
   width: 100%;
@@ -310,6 +313,115 @@ display: none;
 
 
 
+/* PRODUCTOS DETALLE  */
+section.product img{
+  max-width: 433px;
+  max-height: 303px;
+  border-radius: 24%;
+  float: left;
+}
+section.product{
+  float: right;
+  padding-right: 2%;
+}
+.product h1{
+  text-align: center;
+  padding-bottom: 35px;
+  padding-top: 50px;
+  font-family: 'Bitter', sans-serif;
+}
+.product.part-three{
+  padding-bottom: 7%;
+  padding-top: 0%;
+}
+.product.part-three .card{
+  padding-bottom: 7%;
+}
+section.product article{
+  padding: 2%;
+}
+section.product article h2{
+  font-family:'Bitter', sans-serif;
+}
+section.product article h4{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color:rgb(177, 13, 156);
+  font-size: 30px;
+}
+section.product article h3{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  font-family: 'Lobster', sans-serif;
+  padding-top: 3%;
+}
+section.product article h5{
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+}
+.addcart button[type="submit"]{
+  background-color: rgb(104, 125, 222);
+  justify-content: center;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 19px;
+  font-family: 'Lobster', sans-serif;
+  height: 37px;
+  width: 247px;
+  position: relative;
+  left: 1%;
+  top: 21px;
+}
+.addcart .add{
+  position: relative;
+  left: 23%;
+}
+
+.addcart input[type="number"]{
+  background-color: #f17288;
+}
+
+section article img.carrito{
+  width: 67px;
+  height: 67px;
+  position: relative;
+  left: 28%;
+  top: 1%;
+}
+.actionButtons{
+  position: relative;
+  left: 65%;
+  top: 2%;
+  /* display: none; */
+}
+form.editgift input[type="submit"]{
+  background-color: rgb(32, 141, 178);
+  justify-content: center;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 19px;
+  font-family: 'Lobster', sans-serif;
+  height: 37px;
+  width: 208px;
+  position: relative;
+  right: 6%;
+}
+form.delategift input[type="submit"]{
+  background-color:rgb(226, 87, 76);
+  justify-content: center;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 19px;
+  font-family: 'Lobster', sans-serif;
+  height: 37px;
+  width: 208px;
+  position: relative;
+  right: 6%;
+}
+
 
 /* Regalos Css */
   .gifts{
@@ -364,16 +476,25 @@ display: none;
 /* FORMULARIOS DE ADDS */
 
 .addgift{
-  width: 98%;
+  width: 52%;
   max-width: 600px;
   margin-left: auto;
   margin-right: 0;
   position: relative;
+  right: 4%;
+  top: -2pc;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
 }
 
 .addgift form{
   padding-bottom: 7%;
   padding-top: 4%;
+  width: 50%;
+   position: relative;
+   right: 15%;
 }
 
 img.lista{
@@ -387,11 +508,7 @@ img.lista{
   display: inline-flex;
   text-align: center;
 }
-.addgift form{
-  width: 50%;
- position: relative;
- right: 30%;
-}
+
 .addgift .form-group{
   padding-left: 10px;
   padding-right: 10px;
@@ -403,6 +520,11 @@ img.lista{
 .addgift input[type="text"] {
   background-color: #f17288;
   width: 157%;
+}
+.addgift textarea{
+  background-color: #f17288;
+  overflow: hidden;
+  resize: none;
 }
 .addgift #description{
   height: 100px;
@@ -437,6 +559,7 @@ img.lista{
   font-size: 20px;
   font-family: 'Bitter', sans-serif;
 }
+
 .fondo-add-gift{
   background-image:url('../img/ingreso.jpg');
   width: 50%;
@@ -453,12 +576,20 @@ img.lista{
   .addcategory{
     padding-top: 3%;
     padding-bottom: 7%;
+    width: 400%;
+    max-height: 600px;
     max-width: 600px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
   }
   .addcategory form{
    position: relative;
-   right: 25%;
+   right: 10%;
   }
+
   .addcategory .form-group{
     padding-left: 10px;
     padding-right: 10px;

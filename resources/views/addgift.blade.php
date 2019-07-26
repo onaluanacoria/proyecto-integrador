@@ -28,7 +28,7 @@
               </div>
               <div class="form-group">
                 <label for="description">Descripción</label>
-                <input id="description" type="text" name="description" value="{{old("description")}}">
+                <textarea id="description" wrap="hard" name="description" rows="8" cols="59" maxlength="240" value="{{old("description")}}"></textarea>
             </div>
             <div class="form-group">
               <label for="price">Precio</label>

@@ -1,12 +1,10 @@
 @extends('plantilla')
-
 @section('principal')
 
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
 
-<div class="container d-flex justify-content-center">
-  <div class="addcategory d-flex justify-content-center">
-
+  <div class="container d-flex justify-content-center">
+    <div class="addcategory d-flex justify-content-center">
       <ul>
       @foreach ($errors->all() as $error)
         <li>
@@ -14,10 +12,8 @@
         </li>
       @endforeach
       </ul>
-
       <form class="form-addcategory" action="/addcategory" method="post" enctype="multipart/form-data">
         <h1>Agregar Categoria <img class="lista"src="img/lista.png" alt=""></h1>
-
          @csrf
         <div class="form-group">
           <label for="name">Nombre</label>
@@ -34,7 +30,5 @@
         </div>
       </form>
   </div>
-
-
 </div>
 @endsection

@@ -87,10 +87,9 @@
 
 <body>
 @yield('principal')
-</body>
-
 <div class="container-fluid footer">
-  <footer class="site-footer">
+<footer class="site-footer">
+
         <div class="row">
       <div class="footer-about col-ls-4 col-md-4">
           <h3> About<span> GiftCompany </span></h3>
@@ -118,4 +117,6 @@
 </div>
 <p class="copyrights">Copyright &copy Todos los derechos reservados GiftCompany- 2019</p>
 </footer>
+</body>
+
 </html>
