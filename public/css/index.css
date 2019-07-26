@@ -314,6 +314,9 @@ display: none;
 
 
 /* PRODUCTOS DETALLE  */
+article.producDetail{
+
+}
 section.product img{
   max-width: 433px;
   max-height: 303px;
@@ -372,8 +375,8 @@ section.product article h5{
   height: 37px;
   width: 247px;
   position: relative;
-  left: 1%;
-  top: 21px;
+  left: 18%;
+  bottom: -1pc;
 }
 .addcart .add{
   position: relative;
@@ -383,17 +386,20 @@ section.product article h5{
 .addcart input[type="number"]{
   background-color: #f17288;
 }
-
+.addcart.submit{
+  position: absolute;
+  left: 20%;
+}
 section article img.carrito{
   width: 67px;
   height: 67px;
-  position: relative;
-  left: 28%;
-  top: 1%;
+  position: absolute;
+  left: 33%;
+  top: 18%;
 }
 .actionButtons{
   position: relative;
-  left: 65%;
+  left: 18%;
   top: 2%;
   /* display: none; */
 }

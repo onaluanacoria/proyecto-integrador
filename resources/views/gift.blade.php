@@ -9,6 +9,7 @@
           <section class="product">
 
             <article class="producDetail">
+              <img class="carrito" src="..\img\carro.png" alt="carrito">
               <img src="/storage/products/{{$product->featured_img}}" alt="">
               <h3>{{$product->name}}</h3>
               <h5>{{$product->description}}</h5>
@@ -22,7 +23,6 @@
                 </div>
                 <div class="submit">
                   <button type="submit">Agregar al carrito</button>
-                  <img class="carrito" src="..\img\carro.png" alt="carrito">
 
                 </div>
               </form>
