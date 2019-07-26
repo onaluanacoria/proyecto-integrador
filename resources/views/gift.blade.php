@@ -18,7 +18,7 @@
               <form class="addcart" action="/addtocart" method="post">
                 @csrf
                 <div class="add">
-                  <input type="number" name="quantity" value="" placeholder="Cantidad">
+                  <input type="number" name="quantity" value="1" placeholder="Cantidad">
                   <input type="hidden" name="id" value="{{$product->id}}">
                 </div>
                 <div class="submit">
