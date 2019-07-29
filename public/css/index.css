@@ -300,7 +300,7 @@ color: violet;
 display: none;
 }
 .banner{
-background: url(../img/fondo.jpg);
+background: url(../img/index/fondo.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 height: auto;
@@ -433,7 +433,7 @@ form.delategift input[type="submit"]{
   .gifts{
     margin: 0!important;
     padding: 0!important;
-    background-image:url('../img/banner.jpg');
+    background-image:url('../img/index/banner.jpg');
     background-repeat: no-repeat;
     height: 300px;
   }
@@ -567,7 +567,7 @@ img.lista{
 }
 
 .fondo-add-gift{
-  background-image:url('../img/ingreso.jpg');
+  background-image:url('../img/index/ingreso.jpg');
   width: 50%;
   height: 749px;
   position: absolute;

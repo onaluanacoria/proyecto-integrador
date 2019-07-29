@@ -8,7 +8,7 @@
   <div class="container-fluid part-one">
   <div class="banner">
     <video autoplay muted loop>
-      <source src="img/portadaproyecto.mp4" type="video/mp4">
+      <source src="img/index/portadaproyecto.mp4" type="video/mp4">
     </video>
     <div class="content">
       <div class="redes d-flex flex-row-reverse ">
@@ -35,7 +35,7 @@
         <section class="row">
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/gastronomia.jpg" alt="Card image cap">
+      <img class="card-img-top" src="img/categories/gastronomia.jpg" alt="Card image cap">
       <div class="card-body gastronomia">
             <a href="#" class="btn btn-primary">Gastronomia</a>
       </div>
@@ -43,7 +43,7 @@
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/entretenimiento.jpg" alt="Card image cap">
+      <img class="card-img-top" src="img/categories/entretenimiento.jpg" alt="Card image cap">
       <div class="card-body entretenimiento">
             <a href="#" class="btn btn-primary">Entretenimiento</a>
       </div>
@@ -51,7 +51,7 @@
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/relax.jpg" alt="Card image cap">
+      <img class="card-img-top" src="img/categories/relax.jpg" alt="Card image cap">
       <div class="card-body relax">
             <a href="#" class="btn btn-primary">Relax</a>
       </div>
@@ -59,7 +59,7 @@
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/viajes.jpeg" alt="Card image cap">
+      <img class="card-img-top" src="img/categories/viajes.jpeg" alt="Card image cap">
       <div class="card-body viajes">
         <a href="#" class="btn btn-primary">Viajes</a>
       </div>
@@ -67,7 +67,7 @@
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/cursos.jpg" alt="Card image cap">
+      <img class="card-img-top" src="img/categories/cursos.jpg" alt="Card image cap">
       <div class="card-body cursos">
             <a href="#" class="btn btn-primary">Cursos</a>
       </div>
@@ -75,7 +75,7 @@
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/aventura.jpg" alt="Card image cap">
+      <img class="card-img-top" src="img/categories/aventura.jpg" alt="Card image cap">
       <div class="card-body aventura">
           <a href="#" class="btn btn-primary">Aventura</a>
       </div>
@@ -90,7 +90,7 @@
 <div class="container d-flex justify-content-center">
   <h1 class="">Regalá <span class="frase">experiencias</span>, que se conviertan en momentos <span class="frase">inolvidables</span></h1>
   <video autoplay muted loop>
-    <source src="img/ofertas.mp4" type="video/mp4">
+    <source src="img/index/ofertas.mp4" type="video/mp4">
   </video>
   <p class="oferts">¡APROVECHÁ LAS OFERTAS QUE TENEMOS PARA VOS!</p>
 </div>
@@ -98,7 +98,7 @@
 
 <div class="container part-three">
 
-   <h1 class="d-flex justify-content-center">Lo mas regalados<img class="ranking "src="img/podio.png" alt=""></h1>
+   <h1 class="d-flex justify-content-center">Lo mas regalados<img class="ranking "src="img/icon/podio.png" alt=""></h1>
       <section class="row section-products">
         @foreach ($products as $product)
           <article class="col-9 col-md-6 col-lg-4 col-lg-4>">

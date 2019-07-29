@@ -16,7 +16,7 @@
 
 
       <form class="form-addgift" action="/editgift/{{$product->id}}" method="post" enctype="multipart/form-data">
-          <h1>Editar regalo</h1><img class="lista" src="..\img\eraser.png" alt="">
+          <h1>Editar regalo</h1><img class="lista" src="..\img\icon\eraser.png" alt="">
          @csrf
               <div class="form-group">
                 <label for="name">Nombre</label>

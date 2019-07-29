@@ -19,7 +19,7 @@
 
 
       <form class="form-addgift" action="/addgift" method="post" enctype="multipart/form-data">
-        <h1 class="">Agregar Regalo <img class="lista" src="img/regalo.png" alt=""></h1>
+        <h1 class="">Agregar Regalo <img class="lista" src="img/icon/regalo.png" alt=""></h1>
          @csrf {{-- ES OBLIGATORIO PARA FORMS METHOD POST --}}
         {{-- {{csrf_field()}} --}}
               <div class="form-group">
