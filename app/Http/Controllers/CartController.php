@@ -54,6 +54,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
+        return $request;
         // ponemos un filtro si el usuario esta logueado
         $userLog = Auth::user();
           if ($userLog == null) {
@@ -61,7 +62,7 @@ class CartController extends Controller
           } else {
 
         $product = Product::find($request->id);
-        $cart = new Cart; //Recordar que cada Cart es un item dentro del carrito.
+        $cart = new Cart(); //Recordar que cada Cart es un item dentro del carrito.
         $cart->name = $product->name;
         $cart->price = $product->price;
         $cart->quantity = $request->quantity;
