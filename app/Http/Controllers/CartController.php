@@ -18,10 +18,10 @@ class CartController extends Controller
     {
       // ponemos un filtro si el usuario esta logueado
 
-      // $userLog = Auth::user();
-      // if ($userLog == null) {
-      //   return redirect();
-      // } else {
+      $userLog = Auth::user();
+      if ($userLog == null) {
+        return redirect();
+      } else {
       $carts = Cart::where('status',0)
       ->where('user_id', Auth::id())
       ->get(); //Identificamos todos los items de los carritos abiertos del usuario logueado.
@@ -34,6 +34,7 @@ class CartController extends Controller
 
     }
   }
+}
 
     /**
      * Show the form for creating a new resource.
@@ -54,10 +55,10 @@ class CartController extends Controller
     public function store(Request $request)
     {
         // ponemos un filtro si el usuario esta logueado
-        // $userLog = Auth::user();
-        //   if ($userLog == null) {
-        //     return redirect();
-        //   } else {
+        $userLog = Auth::user();
+          if ($userLog == null) {
+            return redirect("/login");
+          } else {
 
         $product = Product::find($request->id);
 
@@ -68,8 +69,9 @@ class CartController extends Controller
         $cart->user_id = Auth::id();
 
         $cart->save();
-        return redirect('/gifts');
+        return redirect('/cart');
       }
+    }
         /**
      * Display the specified resource.
      *

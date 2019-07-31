@@ -1,9 +1,7 @@
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+@extends('plantilla')
+@section('principal')
+
+
     <h1>Carrito</h1>
     <section>
       <article>
@@ -19,6 +17,4 @@
       {{-- <p>Total2: {{$total2}}</p> --}}
     </section>
 
-
-  </body>
-</html>
+@endsection

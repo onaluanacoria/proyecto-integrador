@@ -11,7 +11,7 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
-                      <h1>Login<img class="user" src="img/autorizacion.png" alt=""></h1>
+                      <h1>Login<img class="user" src="img/icon/autorizacion.png" alt=""></h1>
                         @csrf
 
                         <div class="form-group row">
