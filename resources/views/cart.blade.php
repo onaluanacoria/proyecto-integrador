@@ -9,7 +9,7 @@
           <div class="col-md-6">
               <div class="card carts">
 
-  <h1>Carrito <img class="lista" src="img/icon/tranvia.png" alt=""></h1>
+                  <h1>Carrito <img class="lista" src="img/icon/tranvia.png" alt=""></h1>
                   <div class="card-body">
 
                       <section>

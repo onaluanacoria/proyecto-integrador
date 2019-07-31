@@ -3,7 +3,7 @@
 @section('principal')
 
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
-  <script type="text/javascript" src="{{asset('js/giftcompany.js')}}"></script>
+ 
 
   <div class="container-fluid part-one">
   <div class="banner">

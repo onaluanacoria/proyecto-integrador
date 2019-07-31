@@ -30,7 +30,7 @@ class CartController extends Controller
       foreach ($carts as $item) {
         $total = $total +($item->quantity * $item->price);
 
-      return view('cart', compact('carts', 'total'));
+      return view('/cart', compact('carts', 'total'));
 
     }
   }
@@ -61,7 +61,6 @@ class CartController extends Controller
           } else {
 
         $product = Product::find($request->id);
-
         $cart = new Cart; //Recordar que cada Cart es un item dentro del carrito.
         $cart->name = $product->name;
         $cart->price = $product->price;
@@ -70,7 +69,7 @@ class CartController extends Controller
         $cart->user_id = Auth::id();
 
         $cart->save();
-        return redirect('/cart');
+        return true;
       }
     }
         /**

@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('principal')
-
+    <script type="text/javascript" src="{{asset('js/giftcompany.js')}}"></script>
     <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
     <title></title>
   </head>
@@ -17,7 +17,7 @@
 
 
     <div class="container part-three">
-       <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts"src="img/icon/regaloAll.png" alt=""></h1>
+       <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts"src="img/icon/regaloAll.png" alt="" ></h1>
           <section class="row section-products allgifts">
             @foreach ($products as $product)
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">

@@ -1,3 +1,4 @@
+window.onload = function(){
 function validar () {
 var email, password, expresion;
 email = document.getElementById("email").value;
@@ -21,4 +22,5 @@ else if (password === "") {
    alert ("La contraseña debe tener al menos 8 caracteres");
    return false;
  }
+}
 }
