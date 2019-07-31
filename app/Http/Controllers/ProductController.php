@@ -125,7 +125,7 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $req)
+    public function edit($id, Request $req)
     {
 
       $reglas = [
@@ -148,13 +148,13 @@ class ProductController extends Controller
 
       $this->validate($req, $reglas, $mensajes);
 
-      $productEdit = Product::find($id);
-      $productEdit->name = $req["name"];
-      $productEdit->description = $req["description"];
-      $productEdit->price = $req["price"];
-      $productEdit->categoria_id = $req['categoria_id'];
-      $productEdit->save();
-      return view('gift', compact('productEdit'));
+      $product = Product::find($id);
+      $product->name = $req["name"];
+      $product->description = $req["description"];
+      $product->price = $req["price"];
+      $product->categoria_id = $req['categoria_id'];
+      $product->save();
+      return view('gift', compact('product'));
     }
 
     /**
