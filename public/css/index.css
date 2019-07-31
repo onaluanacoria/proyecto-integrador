@@ -428,6 +428,22 @@ form.delategift input[type="submit"]{
   right: 6%;
 }
 
+/*CART CSS*/
+.cart{
+background:url('../img/index/cartFondo.png');
+background-repeat: no-repeat;
+height: 800px;
+width: 100%;
+}
+
+.card.carts{
+  left: 56%;
+  height: 800px;
+}
+.card-body{
+  position: relative;
+  top: 10%;
+}
 
 /* Regalos Css */
   .gifts{
