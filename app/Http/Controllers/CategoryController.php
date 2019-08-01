@@ -81,6 +81,7 @@ class CategoryController extends Controller
       $category = Category::find($id); //Identificamos el producto que queremos mostrar.
       return view('category', compact('category')); //Pasamos el dato a la vista.
     }
+    
 
     /**
      * Show the form for editing the specified resource.

@@ -3,7 +3,7 @@
 @section('principal')
 
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
- 
+
 
   <div class="container-fluid part-one">
   <div class="banner">
@@ -12,12 +12,12 @@
     </video>
     <div class="content">
       <div class="redes d-flex flex-row-reverse ">
-    <ul>
-      <li class="list-inline-item"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-      <li class="list-inline-item"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i> </a></li>
-      <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> </a></li>
-      <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>  </a></li>
-    </ul>
+        <ul>
+          <li class="list-inline-item"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+          <li class="list-inline-item"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i> </a></li>
+          <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> </a></li>
+          <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>  </a></li>
+        </ul>
     </div>
       <div class="title col-md-12 col-lg-10">
         <h1 class="d-flex justify-content-center"><i class="fas fa-hand-holding-heart"></i>GiftCompany</h1>
@@ -30,24 +30,24 @@
     </div>
     </div>
 
-      <div class="container part-two">
+    <div class="container part-two">
         <h1>Categorias</h1>
-        <section class="row">
+      <section class="row">
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
-            <div class="card" style="">
-      <img class="card-img-top" src="img/categories/gastronomia.jpg" alt="Card image cap">
-      <div class="card-body gastronomia">
-            <a href="#" class="btn btn-primary">Gastronomia</a>
-      </div>
-    </div>
+              <div class="card" style="">
+                  <img class="card-img-top" src="img/categories/gastronomia.jpg" alt="Card image cap">
+                  <div class="card-body gastronomia">
+                      <a href="#" class="btn btn-primary">Gastronomia</a>
+                  </div>
+              </div>
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
-            <div class="card" style="">
-      <img class="card-img-top" src="img/categories/entretenimiento.jpg" alt="Card image cap">
-      <div class="card-body entretenimiento">
-            <a href="#" class="btn btn-primary">Entretenimiento</a>
-      </div>
-    </div>
+              <div class="card" style="">
+                <img class="card-img-top" src="img/categories/entretenimiento.jpg" alt="Card image cap">
+                <div class="card-body entretenimiento">
+                    <a href="#" class="btn btn-primary">Entretenimiento</a>
+                </div>
+              </div>
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
@@ -100,18 +100,18 @@
 
    <h1 class="d-flex justify-content-center">Lo mas regalados<img class="ranking "src="img/icon/podio.png" alt=""></h1>
       <section class="row section-products">
-        @foreach ($products as $product)
-          <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
-                <h2>{{$product->category->name}}</h2>
-                <img src="/storage/products/{{$product->featured_img}}" alt="">
-                <h3>{{$product->name}}</h3>
-                <h4>${{$product->price}}</h4>
-                <h5>{{$product->description}}</h5>
-          <a href="/gift/{{$product->id}}">Ver más</a>
-        </article>
+          @foreach ($products as $product)
+              <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
+                    <h2>{{$product->category->name}}</h2>
+                      <img src="/storage/products/{{$product->featured_img}}" alt="">
+                      <h3>{{$product->name}}</h3>
+                      <h4>${{$product->price}}</h4>
+                      <h5>{{$product->description}}</h5>
+                      <a href="/gift/{{$product->id}}">Ver más</a>
+              </article>
 
-      @endforeach
-    </section>
+          @endforeach
+      </section>
 </div>
 
 
