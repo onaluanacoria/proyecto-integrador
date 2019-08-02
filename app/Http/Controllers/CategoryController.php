@@ -19,7 +19,8 @@ class CategoryController extends Controller
        return view('categories', compact('categories'));
    }
 
-    /**
+
+      /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -70,25 +71,7 @@ class CategoryController extends Controller
       return redirect('/categories');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-      $category = Category::find($id); //Identificamos el producto que queremos mostrar.
-      return view('category', compact('category')); //Pasamos el dato a la vista.
-    }
-    
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Category $category)
     {
         //

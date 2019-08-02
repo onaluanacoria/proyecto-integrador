@@ -13,6 +13,8 @@
 
 
 Route::get('/', 'ProductController@giftindex')->name('home');
+// Route::get('/', 'CategoryController@index')->name('home');
+Route::get('/category/search','CategoryController@search');//buscador
 
 
 
@@ -36,6 +38,9 @@ Route::get('/category/{id}', 'CategoryController@show'); //Mostramos 1 producto
 Route::get('/addcategory', 'CategoryController@create');
 Route::post('/addcategory', 'CategoryController@store');//creamos categorias
 Route::get('/deletecategory/{id}','CategoryController@destroy');//eliminamos productos
+
+Route::get('/category/{id}','CategoryController@categoryProducts');
+
 
 
 Route::get('/aboutUs/{nombre?}', function ($nombre = null) {
