@@ -103,17 +103,21 @@
       <div class="medios-pago col-ls-4 col-md-4">
           <h3>Medios de <span>Pago</span></h3>
           <ul>
-            <li><i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i> <i class="fab fa-cc-paypal"></i></li>
+            <li class="list-inline-item"> <img src="img/payment/visa.png" alt=""> </li>
+              <li class="list-inline-item"> <img src="img/payment/mastercard.png" alt=""> </li>
+                <li class="list-inline-item"> <img src="img/payment/american-express.png" alt=""> </li>
+                  <li class="list-inline-item"> <img src="img/payment/paypal.png" alt=""> </li>
+                    <li class="list-inline-item"> <img src="img/payment/bitcoin.png" alt=""> </li>
           </ul>
       </div>
       <div class="menu col-ls-4 col-md-4">
         <h3>Redes <span>sociales</span></h3>
           <div class="redes">
             <ul>
-            <li class="list-inline-item"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-            <li class="list-inline-item"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i> </a></li>
-            <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> </a></li>
-            <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>  </a></li>
+            <li class="list-inline-item"><a href="https://facebook.com" target="_blank"> <img src="img/social/facebook.png" alt=""> </a></li>
+            <li class="list-inline-item"><a href="https://twitter.com" target="_blank"> <img src="img/social/twitter.png" alt=""> </a></li>
+            <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><img src="img/social/instagram.png" alt=""> </a></li>
+            <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"> <img src="img/social/linkedin.png" alt=""></a></li>
           </ul>
           </div>
       </div>

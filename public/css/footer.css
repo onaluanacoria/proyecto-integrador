@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Lobster|Playfair+Display&display=swap');
 footer {
   padding-top: 5%;
   height: 300px;
@@ -39,16 +40,18 @@ p.copyrights {
 }
 
 .medios-pago ul {
-  padding-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 li {
   list-style: none;
 }
 
-.medios-pago li i {
+.medios-pago img {
   color: white;
-  font-size: 35px;
+  width: 40px;
 }
 
 .medios-pago span {
@@ -59,7 +62,7 @@ li {
   padding-left: 11px;
 }
 
-.redes li i {
+.redes img {
   color: white;
-  font-size: 35px;
+  width: 35px;
 }

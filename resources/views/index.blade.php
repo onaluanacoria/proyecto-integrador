@@ -13,10 +13,10 @@
     <div class="content">
       <div class="redes d-flex flex-row-reverse ">
         <ul>
-          <li class="list-inline-item"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-          <li class="list-inline-item"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i> </a></li>
-          <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> </a></li>
-          <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>  </a></li>
+          <li class="list-inline-item"><a href="https://facebook.com" target="_blank"> <img src="img/social/facebook(1).png" alt=""> </a></li>
+          <li class="list-inline-item"><a href="https://twitter.com" target="_blank"><img src="img/social/twitter(1).png" alt=""> </a></li>
+          <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><img src="img/social/instagram(1).png" alt=""></a></li>
+          <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"><img src="img/social/linkedin(1).png" alt=""></a></li>
         </ul>
     </div>
       <div class="title col-md-12 col-lg-10">

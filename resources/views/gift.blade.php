@@ -27,7 +27,7 @@
                   <input type="hidden" name="price" value="{{$product->price}}">
                 </div>
                 <div class="submit">
-                  <button type="button">Agregar al carrito</button>
+                  <button type="submit">Agregar al carrito</button>
 
                 </div>
               </form>

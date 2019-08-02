@@ -65,15 +65,10 @@ body{
   color: #FFF;
   text-transform: uppercase;
   }
-.redes li i{
+.redes li img{
   color: rgb(30, 228, 191);
   }
-.list-inline-item i{
-  font-size: 35px;
-  color: white;
-  padding-top: 10px;
-  padding-left: 7px;
-  }
+
 .part-two {
   padding-top: 5%;
   padding-bottom:5%;
@@ -209,7 +204,7 @@ section article img.carrito{
 }
 .section-products a{
   display: flex;
-  color: rgb(104, 125, 222);
+  color: #f17288;
   font-size: 17px;
   font-weight: bold;
   justify-content: center;
@@ -255,7 +250,7 @@ display: none;
 }
 
 .banner{
-background:url(../img/fondo.jpg);
+background:url(../img/index/fondo.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 height: 450px;
@@ -280,7 +275,7 @@ margin-bottom: 17%;
 display: none;
 }
 .banner{
-background: url(../img/fondo.jpg);
+background: url(../img/index/fondo.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 height: auto;
@@ -432,8 +427,38 @@ form.delategift input[type="submit"]{
 .cart{
 background:url('../img/index/cartFondo.png');
 background-repeat: no-repeat;
-height: 800px;
+background-size: cover;
+position: relative;
+height: 650px;
 width: 100%;
+
+}
+.cart:before{
+  content:"";
+  width: 100%;
+  height: 650px;
+  background-color: black;
+  opacity: 0.3;
+  position: absolute;
+}
+.carts{
+  position: relative;
+  left: 50%;
+  top: 5%;
+}
+.cart h4{
+  font-family: 'Lobster', sans-serif;
+}
+.cart h3{
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color:rgb(177, 13, 156);
+}
+table{
+  width: 70%;
+  height: 400px;
+  padding-left: 10px;
 }
 
 .card.carts{
@@ -488,6 +513,10 @@ width: 100%;
     height: 45px;
     width: 244px;
     background-color: #f17288;
+  }
+  .card-body.categorias a{
+    color: #FFF;
+    background-color: rgb(104, 125, 222) ;
   }
 
 

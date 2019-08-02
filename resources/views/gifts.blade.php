@@ -25,7 +25,9 @@
           <section class="row section-products allgifts">
             @foreach ($products as $product)
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
-                    <h2>{{$product->category->name}}</h2>
+                <div class="card-body categorias">
+                    <a href="#" class="btn btn-primary">{{$product->category->name}}</a>
+                </div>
                     <img src="/storage/products/{{$product->featured_img}}" alt="">
                     <h3>{{$product->name}}</h3>
                     <h4>${{$product->price}}</h4>
