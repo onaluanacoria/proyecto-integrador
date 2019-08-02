@@ -2,6 +2,10 @@
 
 @section('principal')
 
+  @section("titulo")
+    GiftCompany/ Categorias
+  @endsection
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -34,13 +38,13 @@
                         <a href="#" class="btn btn-primary">{{$categories->name}}</a>
                     </div>
                     </div>
-
                   @forelse ($category->id as $vuelta)
                     <li>{{$vuelta->name}}</li>
 
                   @empty
                     {{"Esta vacio"}}
                   @endforelse
+
 
           </article>
           {{-- <section class="row section-products allgifts">
@@ -59,6 +63,4 @@
 
     <hr>
 </div>
-
-
 @endsection

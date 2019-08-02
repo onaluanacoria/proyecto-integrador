@@ -1,6 +1,10 @@
 @extends('plantilla')
 @section('principal')
 
+  @section("titulo")
+    GiftCompany/mi carrito
+  @endsection
+
 <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
 
 
