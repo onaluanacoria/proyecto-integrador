@@ -14,7 +14,7 @@
 
 Route::get('/', 'ProductController@giftindex')->name('home');
 // Route::get('/', 'CategoryController@index')->name('home');
-Route::get('/category/search','CategoryController@search');//buscador
+Route::get('/user/{id}', 'ProductController@show'); //Mostramos 1 producto
 
 
 
