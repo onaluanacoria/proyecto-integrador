@@ -1,6 +1,10 @@
 @extends('plantilla')
 @section('principal')
 
+  @section("titulo")
+    GiftCompany/ agregar categoria
+  @endsection
+
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
 
   <div class="container d-flex justify-content-center">

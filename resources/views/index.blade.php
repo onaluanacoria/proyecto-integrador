@@ -2,6 +2,9 @@
 
 @section('principal')
 
+@section("titulo")
+GiftCompany
+@endsection
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
 
 

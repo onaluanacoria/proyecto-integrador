@@ -2,6 +2,10 @@
 
 @section('principal')
 
+  @section("titulo")
+    GiftCompany/ faqs
+  @endsection
+
 <link rel="stylesheet" href=  "{{asset('css/faqs.css')}}"/>
 
 
