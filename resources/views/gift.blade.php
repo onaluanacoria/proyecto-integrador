@@ -16,7 +16,7 @@
               <h5>{{$product->description}}</h5>
               <h4>{{$product->price}}</h4>
               {{-- <p><a href="#">Comprar</a></p> --}}
-              <form class="addcart" action="/addtocart" method="post">
+              <form class="addcart" action="/addtocart" method="get">
                 @csrf
                 <div class="add">
                   <input type="number" name="quantity" value="1" placeholder="Cantidad">

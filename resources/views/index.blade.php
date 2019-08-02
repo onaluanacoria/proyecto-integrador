@@ -32,58 +32,74 @@
 
     <div class="container part-two">
         <h1>Categorias</h1>
+
+     {{-- @dd($categories); --}}
       <section class="row">
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
-              <div class="card" style="">
-                  <img class="card-img-top" src="img/categories/gastronomia.jpg" alt="Card image cap">
+                    <div class="card" style="">
+                  <img class="card-img-top" src="/storage/imgCategories/{{$categories[5]->imgCategories}}" alt="Card image cap">
                   <div class="card-body gastronomia">
-                      <a href="#" class="btn btn-primary">Gastronomia</a>
+                      <a href="#" class="btn btn-primary">{{$categories[5]->name}}</a>
                   </div>
               </div>
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
               <div class="card" style="">
-                <img class="card-img-top" src="img/categories/entretenimiento.jpg" alt="Card image cap">
+                <img class="card-img-top" src="/storage/imgCategories/{{$categories[0]->imgCategories}}" alt="Card image cap">
                 <div class="card-body entretenimiento">
-                    <a href="#" class="btn btn-primary">Entretenimiento</a>
+                    <a href="#" class="btn btn-primary">{{$categories[0]->name}}</a>
                 </div>
               </div>
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/categories/relax.jpg" alt="Card image cap">
+      <img class="card-img-top" src="/storage/imgCategories/{{$categories[3]->imgCategories}}" alt="Card image cap">
       <div class="card-body relax">
-            <a href="#" class="btn btn-primary">Relax</a>
+            <a href="#" class="btn btn-primary">{{$categories[3]->name}}</a>
       </div>
     </div>
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/categories/viajes.jpeg" alt="Card image cap">
+      <img class="card-img-top" src="/storage/imgCategories/{{$categories[2]->imgCategories}}" alt="Card image cap">
       <div class="card-body viajes">
-        <a href="#" class="btn btn-primary">Viajes</a>
+        <a href="#" class="btn btn-primary">{{$categories[2]->name}}</a>
       </div>
     </div>
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/categories/cursos.jpg" alt="Card image cap">
+      <img class="card-img-top" src="/storage/imgCategories/{{$categories[1]->imgCategories}}" alt="Card image cap">
       <div class="card-body cursos">
-            <a href="#" class="btn btn-primary">Cursos</a>
+            <a href="#" class="btn btn-primary">{{$categories[1]->name}}</a>
       </div>
     </div>
           </article>
           <article class="col-7 col-sm-6 col-md-6 col-lg-4">
             <div class="card" style="">
-      <img class="card-img-top" src="img/categories/aventura.jpg" alt="Card image cap">
+      <img class="card-img-top" src="/storage/imgCategories/{{$categories[4]->imgCategories}}" alt="Card image cap">
       <div class="card-body aventura">
-          <a href="#" class="btn btn-primary">Aventura</a>
+          <a href="#" class="btn btn-primary">{{$categories[4]->name}}</a>
       </div>
            </div>
           </article>
     </section>
+
     <hr>
 </div>
+      {{-- @forelse ($categories as $category)
+        <li>{{$category->name}}</li>
+
+
+        <ul>
+
+        @forelse ($category->name as $vuelta)
+          <li>{{$vuelta->name}}</li>
+            <li>{{$id->name}}</li>
+         @empty
+          {{"Esta vacio"}}
+        @endforelse --}}
+
 
 
 <div class="jumbotron jumbotron-fluid" style="background-color: rgba(235, 233, 235, 1);">
@@ -101,6 +117,7 @@
    <h1 class="d-flex justify-content-center">Lo mas regalados<img class="ranking "src="img/icon/podio.png" alt=""></h1>
       <section class="row section-products">
           @foreach ($products as $product)
+            @if($product->productTop())
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
                     <h2>{{$product->category->name}}</h2>
                       <img src="/storage/products/{{$product->featured_img}}" alt="">
@@ -109,7 +126,7 @@
                       <h5>{{$product->description}}</h5>
                       <a href="/gift/{{$product->id}}">Ver más</a>
               </article>
-
+            @endif
           @endforeach
       </section>
 </div>

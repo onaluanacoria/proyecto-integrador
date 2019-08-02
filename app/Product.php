@@ -15,4 +15,9 @@ class Product extends Model
     return $this->belongsToMany('App\Product','categoria_id','name');
   }
 
+  public function productTop(){
+    return $this->rating >= 7;
+  }
+
+
 }

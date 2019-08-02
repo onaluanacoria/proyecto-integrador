@@ -15,8 +15,9 @@ class ProductController extends Controller
      */
     public function giftindex()
     {
-      $products = Product::where('rating', '>', "7")->get(); //Traemos todos los productos.
-      return view('index', compact('products'));
+      $products = Product::all();
+      $categories = Category::all();//Traemos todos los productos.
+      return view('index', compact('products', 'categories'));
     }
 
     public function index()

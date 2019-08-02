@@ -126,6 +126,8 @@
 </div>
 <p class="copyrights">Copyright &copy Todos los derechos reservados GiftCompany- 2019</p>
 </footer>
-</body>
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="{{asset('js/giftcompany.js')}}"></script>
+</body>
 </html>

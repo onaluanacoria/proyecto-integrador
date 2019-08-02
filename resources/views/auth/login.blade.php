@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" href=  "{{asset('css/register.css')}}"/>
 <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
-<script src='js/validar.js'></script>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -74,4 +74,5 @@
         </div>
     </div>
 </div>
+<script src='js/validar.js'></script>
 @endsection
