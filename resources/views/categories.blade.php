@@ -1,66 +1,60 @@
-@extends('plantilla')
+{{-- @dd($categories); --}}
+
+@foreach ($categories as $category)
+  @dd($category->products)
+
+@endforeach
+{{-- @extends('plantilla')
 
 @section('principal')
 
   @section("titulo")
     GiftCompany/ Categorias
   @endsection
+  @extends('plantilla')
+
+  @section('principal')
+      <script type="text/javascript" src="{{asset('js/giftcompany.js')}}"></script>
+      <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
+      <title></title>
+    </head>
+
+    <body>
+
+  <div class="container-fluid gifts">
+    <form class="gift-search" action="/gifts/search" method="get">
+      <input type="submit" name="" value="Buscar Regalo">
+      <input type="text" name="name" value="">
+    </form>
+  </div>
 
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class="container part-two">
-        <h1>Categorias</h1>
-        {{-- @forelse ($categories as $category)
-          <li>{{$category->name}}</li>
+      <div class="container part-three">
+         <h1 class="d-flex justify-content-center">Categorias<img class="allgifts"src="img/icon/regaloAll.png" alt="" ></h1>
+           <p> {{$products->total()}} Regalos |
+                pagina {{$products->currentPage()}}
+                de {{$products->lastPage()}}
+           </p>
+
+           <div class="card-body categorias">
+               <a href="#" class="btn btn-primary">{{$product->category->name}}</a>
+           </div>
+            <section class="row section-products allgifts">
+              @foreach ($products as $product)
+                <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
+
+                      <img src="/storage/products/{{$product->featured_img}}" alt="">
+                      <h3>{{$product->name}}</h3>
+                      <h4>${{$product->price}}</h4>
+                      <h5>{{$product->description}}</h5>
+                <a href="/gift/{{$product->id}}">Ver más</a>
+              </article>
+            @endforeach
+          </section>
+          {!! $products->render() !!}
+      </div>
+    </body>
+  </html>
 
 
-          <ul>
-
-          @forelse ($category->name as $vuelta)
-            <li>{{$vuelta->name}}</li>
-              <li>{{$id->name}}</li>
-           @empty
-
-          @endforelse --}}
-     {{-- @dd($categories); --}}
-      <section class="row">
-          <article class="col-7 col-sm-6 col-md-6 col-lg-4">
-                    <div class="card" style="">
-                  @forelse ($categories as $category)
-                    <img class="card-img-top" src="/storage/imgCategories/{{$categories->imgCategories}}" alt="Card image cap">
-                    <div class="card-body gastronomia">
-                        <a href="#" class="btn btn-primary">{{$categories->name}}</a>
-                    </div>
-                    </div>
-                  @forelse ($category->id as $vuelta)
-                    <li>{{$vuelta->name}}</li>
-
-                  @empty
-                    {{"Esta vacio"}}
-                  @endforelse
-
-
-          </article>
-          {{-- <section class="row section-products allgifts">
-            @foreach ($products as $product)
-              <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
-                    <h2>{{$product->category->name}}</h2>
-                    <img src="/storage/products/{{$product->featured_img}}" alt="">
-                    <h3>{{$product->name}}</h3>
-                    <h4>${{$product->price}}</h4>
-                    <h5>{{$product->description}}</h5>
-              <a href="/gift/{{$product->id}}">Ver más</a>
-            </article>
-          @endforeach
-        </section> --}}
-    </section>
-
-    <hr>
-</div>
-@endsection
+  @endsection --}}

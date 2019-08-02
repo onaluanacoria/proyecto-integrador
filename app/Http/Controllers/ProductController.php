@@ -33,6 +33,13 @@ class ProductController extends Controller
       return view('gift', compact('product')); //Pasamos el dato a la vista.
     }
 
+    public function filter($id)
+    {
+      $category= Category::find($id);
+      $products = Product::where('categoria_id', $id);
+      dd($products); //Identificamos el producto que queremos mostrar.
+      return view('categories', compact('products', 'category')); //Pasamos el dato a la vista.
+    }
     /**
      * Show the form for creating a new resource.
      *

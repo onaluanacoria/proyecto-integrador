@@ -16,10 +16,10 @@ Route::get('/', 'ProductController@giftindex')->name('home');
 // Route::get('/', 'CategoryController@index')->name('home');
 Route::get('/user/{id}', 'ProductController@show'); //Mostramos 1 producto
 
-
+// Route::get('/gift/category/{category_id}', 'ProductController@filter');
 
 Route::get('/gifts', 'ProductController@index');
-Route::get('/gift/{id}', 'ProductController@show'); //Mostramos 1 producto
+// Route::get('/gift/{id}', 'ProductController@show'); //Mostramos 1 producto
 
 Route::get('/cart', 'CartController@index'); //Mostramos el carrito abierto.
 Route::post('/addtocart', 'CartController@store'); //Guardamos productos en tabla cart.
@@ -33,13 +33,13 @@ Route::post('/editgift/{id}','ProductController@edit');
 Route::get('/deletegift/{id}','ProductController@destroy');//eliminamos productos
 
 
-Route::get('/categories', 'CategoryController@index');
-Route::get('/category/{id}', 'CategoryController@show'); //Mostramos 1 producto
+Route::get('/gift/categories', 'CategoryController@index');
+// Route::get('/category/{id}', 'CategoryController@show'); //Mostramos 1 producto
 Route::get('/addcategory', 'CategoryController@create');
 Route::post('/addcategory', 'CategoryController@store');//creamos categorias
 Route::get('/deletecategory/{id}','CategoryController@destroy');//eliminamos productos
 
-Route::get('/category/{id}','CategoryController@categoryProducts');
+// Route::get('/category/{id}','CategoryController@categoryProducts');
 
 
 
