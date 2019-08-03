@@ -14,7 +14,7 @@ class AddRatingTableProducts extends Migration
     public function up()
     {
       Schema::table('products', function (Blueprint $table){
-      $table->smallInteger("rating")->unsigned();
+      $table->smallInteger("rating")->unsigned()->nullable()->change();
     });
 
     }

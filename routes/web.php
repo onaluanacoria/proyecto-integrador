@@ -14,12 +14,12 @@
 
 Route::get('/', 'ProductController@giftindex')->name('home');
 // Route::get('/', 'CategoryController@index')->name('home');
-Route::get('/user/{id}', 'ProductController@show'); //Mostramos 1 producto
-
 // Route::get('/gift/category/{category_id}', 'ProductController@filter');
 
 Route::get('/gifts', 'ProductController@index');
-// Route::get('/gift/{id}', 'ProductController@show'); //Mostramos 1 producto
+Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
+
 
 Route::get('/cart', 'CartController@index'); //Mostramos el carrito abierto.
 Route::post('/addtocart', 'CartController@store'); //Guardamos productos en tabla cart.
@@ -32,8 +32,8 @@ Route::get('/editgift/{id}','ProductController@showform');
 Route::post('/editgift/{id}','ProductController@edit');
 Route::get('/deletegift/{id}','ProductController@destroy');//eliminamos productos
 
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
+Route::get('/gift/{id}', 'ProductController@show'); //Mostramos 1 producto
+
 
 
 

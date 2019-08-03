@@ -14,7 +14,7 @@ class AddStockToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table-> smallInteger('stock');
+            $table-> smallInteger('stock')->nullable()->change();
         });
     }
 
