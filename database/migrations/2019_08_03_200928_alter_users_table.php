@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddFotoPerfilToUsersTable extends Migration
+class AlterUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AddFotoPerfilToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->renameColumn('FotoPerfil', 'profile_image')->nullable();
+            $table->dropColumn('FotoPerfil');
+            $table->string('profile_image')->nullable();
         });
     }
 
@@ -26,7 +27,8 @@ class AddFotoPerfilToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-          $table->dropColumn('FotoPerfil');
+            $table->string('FotoPerfil');
+            $table->dropColumn('profile_image');
         });
     }
 }

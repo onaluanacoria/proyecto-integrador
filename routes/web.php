@@ -32,6 +32,10 @@ Route::get('/editgift/{id}','ProductController@showform');
 Route::post('/editgift/{id}','ProductController@edit');
 Route::get('/deletegift/{id}','ProductController@destroy');//eliminamos productos
 
+Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
+
+
 
 Route::get('/gift/categories', 'CategoryController@index');
 // Route::get('/category/{id}', 'CategoryController@show'); //Mostramos 1 producto
