@@ -26,7 +26,7 @@
             @foreach ($products as $product)
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
                 <div class="card-body categorias">
-                    <a href="#" class="btn btn-primary">{{$product->category->name}}</a>
+                    <a href="#" class="btn btn-primary">{{ !empty ($product->category)? $product->category->name: ' ' }}</a>
                 </div>
                     <img src="/storage/products/{{$product->featured_img}}" alt="">
                     <h3>{{$product->name}}</h3>

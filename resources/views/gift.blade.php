@@ -9,6 +9,8 @@
           <h1>Detalle del producto</h1>
           <section class="product">
 
+
+
             <article class="producDetail">
               <img class="carrito" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
               <img src="/storage/products/{{$product->featured_img}}" alt="">
