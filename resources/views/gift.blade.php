@@ -35,20 +35,24 @@
               </form>
             </article>
           </section>
-          <div class="actionButtons">
-          <form class="editgift" action="/editgift/{{$product->id}}" method="get">
-            @csrf
-            <input type="submit" name="" value="Editar">
-            </form>
 
-              <form class="delategift" action="/deletegift/{{$product->id}}" method="get">
-                <input type="submit" name="" value="Borrar Regalo">
-                @csrf
-            </form>
-            </div>
-            </div>
+                <div class="actionButtons">
+                  @can ('gift.edit')
+                    <form class="editgift" action="/editgift/{{$product->id}}" method="get">
+                      @csrf
+                        <input type="submit" name="" value="Editar">
+                    </form>
+                  @endcan
+                  @can ('gift.destroy')
+                    <form class="delategift" action="/deletegift/{{$product->id}}" method="get">
+                        @csrf
+                      <input type="submit" name="" value="Borrar Regalo">
+                  </form>
+                  @endcan
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
 @endsection

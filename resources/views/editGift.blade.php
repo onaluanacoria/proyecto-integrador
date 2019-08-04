@@ -14,7 +14,7 @@
       @endforeach
       </ul>
 
-
+      @can ('gifts.edit')
       <form class="form-addgift" action="/editgift/{{$product->id}}" method="post" enctype="multipart/form-data">
           <h1>Editar regalo</h1><img class="lista" src="..\img\icon\eraser.png" alt="">
          @csrf
@@ -28,7 +28,7 @@
               </div>
               <div class="form-group">
                 <label for="price">Precio</label>
-                <input id="price" type="text" name="price" value="{{$product->price}}">
+                <input id="price" type="number" name="price" value="{{$product->price}}">
               </div>
               <div class="form-group">
                 <label>Imagen</label>
@@ -48,6 +48,7 @@
             </div>
         </form>
     </div>
+      @endcan
 
     <div class="fondo-add-gift">    </div>
   </div>

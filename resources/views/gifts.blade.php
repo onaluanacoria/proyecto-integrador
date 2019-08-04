@@ -1,5 +1,6 @@
 @extends('plantilla')
 
+
 @section('principal')
     <script type="text/javascript" src="{{asset('js/giftcompany.js')}}"></script>
     <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
@@ -18,7 +19,7 @@
 
     <div class="container part-three">
        <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts"src="img/icon/regaloAll.png" alt="" ></h1>
-         <p> {{$products->total()}} Regalos |
+         <p> {{$products-> total()}} Regalos |
               pagina {{$products->currentPage()}}
               de {{$products->lastPage()}}
          </p>
@@ -40,6 +41,4 @@
     </div>
   </body>
 </html>
-
-
 @endsection

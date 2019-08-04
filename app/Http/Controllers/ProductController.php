@@ -20,11 +20,17 @@ class ProductController extends Controller
       return view('index', compact('products', 'categories'));
     }
 
+    public function search(Request $req){
+      $searchData = '%'.$req["name"].'%';
+      $products = Product::where('name','like', $searchData)
+     ->get();
+      return view('/gifts',compact('products'));
+    }
+
     public function index()
     {
-      $products = Product::paginate(6);
-       //Traemos todos los productos.
-      return view('gifts', compact('products'));
+      $products = Product::paginate(10);
+      return view('/gifts', compact('products'));
     }
 
     public function show($id)
@@ -100,22 +106,8 @@ class ProductController extends Controller
                   $newGift->save();
 
                   return redirect('/gifts');
-    }
-    public function search(Request $req){
-      $searchData = '%'.$req["name"].'%';
-      $products = Product::where('name','like', $searchData)
-       ->get();
+              }
 
-      return view('gifts',compact('products'));
-    }
-
-    // public function masbuscados()
-    // {
-    //     $bestRanking = Product::where('rating', '>', "7");
-    //     // dd($arrayAsoc);
-    //     // dd(view('actor')->with('actor', $actor));
-    //     return view('index',compact('bestRanking'));
-    // }
 
     /**
      * Display the specified resource.
@@ -123,7 +115,7 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-     public function showform($id) {
+     public function update($id){  //Cambie el showform por update{
        $product = Product::find($id); //Identificamos el producto que queremos mostrar.
        $categorias = Category::all();
        return view('editGift', compact('product', 'categorias')); //Pasamos el dato a la vista.
@@ -173,17 +165,7 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $productDelete = Product::find($id);

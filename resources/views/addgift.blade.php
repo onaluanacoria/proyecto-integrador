@@ -1,5 +1,4 @@
 @extends('plantilla')
-
 @section('principal')
 
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
@@ -16,6 +15,8 @@
       @endforeach
       </ul>
 
+
+      @can ('addgift')
 
 
       <form class="form-addgift" action="/addgift" method="post" enctype="multipart/form-data">
@@ -51,8 +52,8 @@
               <input type="submit" name="" value="Agregar Regalo">
             </div>
         </form>
-
     </div>
+    @endcan
 
 
   </div>

@@ -33,21 +33,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                      @can ('gifts.index')
-                        <li>
-                          <a class="nav-link" href="{{route ('gifts.index') }}"> Productos </a>
-                        </li>
-                      @endcan
-                      @can ('users.index')
-                    <li class="nav-item" >
-                      <a class="nav-link" href="{{route ('users.index') }}"> Roles </a>
-                    </li>
-                      @endcan
-                      @can ('roles.index')
-                    <li class="nav-item" >
-                      <a class="nav-link" href="{{route ('roles.index') }}"> Usuarios </a>
+                    @can ('update', $post)
+
+                    @endcan
+                      <li class="nav-item" >
+                        <a class="nav-link" href="{{route ('gifts.index') }}"> Productos </a>
+                      </li>
+                      <li class="nav-item" >
+                        <a class="nav-link" href="{{route ('users.index') }}"> Roles </a>
+                      </li>
+                      <li class="nav-item" >
+                        <a class="nav-link" href="{{route ('roles.index') }}"> Usuarios </a>
+                      </li>
+
                     </ul>
-                      @endcan
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

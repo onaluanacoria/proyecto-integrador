@@ -26,7 +26,9 @@ class AddInformationUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropColumn('last_name');
-        Schema::dropColumn('birth_year');
+        Schema::table('users', function (Blueprint $table) {
+        $table->dropColumn('last_name');
+        $table->dropColumn('birth_year');
+    });
     }
 }
