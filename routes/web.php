@@ -11,8 +11,8 @@
 |
 */
 
-
-Route::get('/home', 'HomeController@index')->name('home');
+// 
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'ProductController@giftindex')->name('index');
 // Route::get('/', 'CategoryController@index')->name('home');
 // Route::get('/gift/category/{category_id}', 'ProductController@filter');
