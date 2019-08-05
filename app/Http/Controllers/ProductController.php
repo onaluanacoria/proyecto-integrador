@@ -13,6 +13,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function index()
+     {
+       $products = Product::paginate(9);
+       return view('gifts', compact('products'));
+     }
+
     public function giftindex()
     {
       $products = Product::all();
@@ -21,16 +28,9 @@ class ProductController extends Controller
     }
 
     public function search(Request $req){
-      $searchData = '%'.$req["name"].'%';
-      $products = Product::where('name','like', $searchData)
-     ->get();
+      $searchData = '%'. $req["name"] .'%';
+      $products = Product::where('name','like', $searchData)->get();
       return view('/gifts',compact('products'));
-    }
-
-    public function index()
-    {
-      $products = Product::paginate(9);
-      return view('/gifts', compact('products'));
     }
 
     public function show($id)
@@ -39,15 +39,11 @@ class ProductController extends Controller
       return view('gift', compact('product'));
     }
 
-    public function categoria($id){
+    public function category($id){
     $products = Product::where('categoria_id', $id)->paginate(5);
-
-    // $productos = Producto::where('categoria_id', $id)->get();
-
     $category = Category::find($id);
-
     return view('categories', compact('products', 'category'));
-}
+  }
 
     // public function filter($id)
     // {

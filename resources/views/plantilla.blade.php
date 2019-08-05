@@ -31,7 +31,7 @@
               <a class="navbar-brand" href="{{ url('/') }}">
                 <img class="lista" src="img/icon/regalo (1).png" alt="">  GiftCompany
               </a>
-              <a class = "navbar-brand" href="{{ url('/gift/categories') }}"> Categorias </a>
+              <a class = "navbar-brand" href="{{ url('/gifts') }}"> Regalos </a>
 
               <a class = "navbar-brand" href="{{ url('/faqs') }}"> Preguntas frecuentes </a>
 

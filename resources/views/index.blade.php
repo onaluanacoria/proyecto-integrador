@@ -42,7 +42,7 @@ GiftCompany
                     <div class="card" style="">
                   <img class="card-img-top" src="/storage/imgCategories/{{$categories[5]->imgCategories}}" alt="Card image cap">
                   <div class="card-body gastronomia">
-                      <a href="categoria/{{$categories[5]->id}}" class="btn btn-primary">{{$categories[5]->name}}</a>
+                      <a href="category/{{$categories[5]->id}}" class="btn btn-primary">{{$categories[5]->name}}</a>
                   </div>
               </div>
           </article>
@@ -50,7 +50,7 @@ GiftCompany
               <div class="card" style="">
                 <img class="card-img-top" src="/storage/imgCategories/{{$categories[0]->imgCategories}}" alt="Card image cap">
                 <div class="card-body entretenimiento">
-                    <a href="categoria/{{$categories[0]->id}}" class="btn btn-primary">{{$categories[0]->name}}</a>
+                    <a href="category/{{$categories[0]->id}}" class="btn btn-primary">{{$categories[0]->name}}</a>
                 </div>
               </div>
           </article>
@@ -58,7 +58,7 @@ GiftCompany
             <div class="card" style="">
       <img class="card-img-top" src="/storage/imgCategories/{{$categories[3]->imgCategories}}" alt="Card image cap">
       <div class="card-body relax">
-            <a href="categoria/{{$categories[3]->id}}" class="btn btn-primary">{{$categories[3]->name}}</a>
+            <a href="category/{{$categories[3]->id}}" class="btn btn-primary">{{$categories[3]->name}}</a>
       </div>
     </div>
           </article>
@@ -66,7 +66,7 @@ GiftCompany
             <div class="card" style="">
       <img class="card-img-top" src="/storage/imgCategories/{{$categories[2]->imgCategories}}" alt="Card image cap">
       <div class="card-body viajes">
-        <a href="categoria/{{$categories[2]->id}}" class="btn btn-primary">{{$categories[2]->name}}</a>
+        <a href="category/{{$categories[2]->id}}" class="btn btn-primary">{{$categories[2]->name}}</a>
       </div>
     </div>
           </article>
@@ -74,7 +74,7 @@ GiftCompany
             <div class="card" style="">
       <img class="card-img-top" src="/storage/imgCategories/{{$categories[1]->imgCategories}}" alt="Card image cap">
       <div class="card-body cursos">
-            <a href="categoria/{{$categories[1]->id}}" class="btn btn-primary">{{$categories[1]->name}}</a>
+            <a href="category/{{$categories[1]->id}}" class="btn btn-primary">{{$categories[1]->name}}</a>
       </div>
     </div>
           </article>
@@ -82,7 +82,7 @@ GiftCompany
             <div class="card" style="">
       <img class="card-img-top" src="/storage/imgCategories/{{$categories[4]->imgCategories}}" alt="Card image cap">
       <div class="card-body aventura">
-          <a href="categoria/{{$categories[4]->id}}" class="btn btn-primary">{{$categories[4]->name}}</a>
+          <a href="category/{{$categories[4]->id}}" class="btn btn-primary">{{$categories[4]->name}}</a>
       </div>
            </div>
           </article>

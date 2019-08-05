@@ -4,7 +4,7 @@
 @section('principal')
     <script type="text/javascript" src="{{asset('js/giftcompany.js')}}"></script>
     <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
-    <title></title>
+    <title>Regalos</title>
   </head>
 
   <body>
@@ -17,21 +17,30 @@
 </div>
 
 <div class="buttonDeAddGift">
-      @can ('addgift')
+    @can ('add.gift')
   <form class="" action="/addgift" method="get">
     @csrf
     <input type="submit" name="" class="" value="Agregar Regalo">
+  </form>
+    @endcan
+</div>
+<div class="buttonDeAddCategory">
+      @can ('addcategory')
+  <form class="" action="/addcategory" method="get">
+    @csrf
+    <input type="submit" name="" class="" value="Agregar Categoria">
 
   </form>
     @endcan
 </div>
 
+
     <div class="container part-three">
        <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts"src="img/icon/regaloAll.png" alt="" ></h1>
-         <p> {{$products-> total()}} Regalos |
+         {{-- <p> {{$products-> total()}} Regalos |
               pagina {{$products->currentPage()}}
               de {{$products->lastPage()}}
-         </p>
+         </p> --}}
 
           <section class="row section-products allgifts">
             @foreach ($products as $product)
@@ -47,7 +56,7 @@
             </article>
           @endforeach
         </section>
-        {!! $products->render() !!}
+        {{-- {!! $products->render() !!} --}}
     </div>
   </body>
 </html>
