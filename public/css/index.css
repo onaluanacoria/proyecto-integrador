@@ -519,6 +519,22 @@ table{
     background-color: rgb(104, 125, 222) ;
   }
 
+  /* Boton de Agregar Regalo */
+  .buttonDeAddGift{
+    position: relative;
+    left: 5%;
+    bottom: -7pc;
+    }
+  .buttonDeAddGift input[type='submit']{
+    width: 25%;
+    height: 40px;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Lobster', sans-serif;
+    background-color: rgb(210, 111, 175);
+}
 
 
 

@@ -16,6 +16,7 @@ class CategoryController extends Controller
      public function index()
    {
        $categories = Category::all();
+       // $product = Product::all();
        return view('categories', compact('categories'));
    }
 
@@ -41,12 +42,12 @@ class CategoryController extends Controller
      */
     public function store(Request $req)
     {
-      // //Primero valido los datos. //
+
       $reglas = [
         "name" => "required",
         "imgCategories" =>"image",
       ];
-    //
+
       $mensajes = [
         "string" => "El campo :attribute  debe ser de texto.",
         // "name.string" => "El campo Nombre debe ser de texto.",
@@ -57,18 +58,17 @@ class CategoryController extends Controller
 
       $this->validate($req, $reglas, $mensajes);
       $newCategory = new Category();
-    //
+
       $path = $req->file('imgCategories')->store('/public/imgCategories');
       $file = basename($path);
-    //   //dd($path, $file);
+
 
       $newCategory->name = $req["name"];
       $newCategory->imgCategories = $file;
 
-      // dd($req, $newCategory);
       $newCategory->save();
 
-      return redirect('/categories');
+      return redirect('/gift/categories');
     }
 
 
@@ -86,7 +86,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+
     }
 
     /**
@@ -100,6 +100,6 @@ class CategoryController extends Controller
          $categoryDelete = Category::find($id);
          $categoryDelete->delete();
 
-         return redirect('/categories');
+         return redirect('gift/categories');
        }
 }

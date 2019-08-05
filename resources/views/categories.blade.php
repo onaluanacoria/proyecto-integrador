@@ -1,12 +1,47 @@
-{{-- @dd($categories); --}}
-
-@foreach ($categories as $category)
-  @dd($category->products)
-
-@endforeach
-{{-- @extends('plantilla')
+@extends('plantilla')
 
 @section('principal')
+
+  <div class="titulo-seccion">
+            <h2>{{$category['name']}}</h2>
+
+  </div>
+  @foreach ($products as $product)
+        <article class="producto">
+            <a style="text-decoration:none;" href="/gift/{{$product['id']}}">
+                <div class="p-imagen">
+                    <img src="/storage/products/{{$product["featured_img"]}}" alt="{{$product["name"]}}">
+                </div>
+                <div class="producto-texto">
+                    <h3>{{$product["name"]}}</h3>
+                </div>
+            </a>
+            <div class="producto-boton">
+                <p class="precio">${{$product["price"]}}</p>
+                <form class="" action="/addtocart" method="post">
+                  @csrf
+                    <input type="text" hidden name="id" value="{{$product['id']}}">
+                    <button class="comprar" type="submit" name="button">Comprar</button>
+                </form>
+            </div>
+        </article>
+    @endforeach
+
+
+@endsection
+    {{-- @forelse ($category as $item => $value)
+      @dd($value);
+    @empty
+
+    @endforelse --}}
+
+
+    {{-- @dd($category->products)
+   --}}
+
+{{-- @extends('plantilla')
+
+
 
   @section("titulo")
     GiftCompany/ Categorias

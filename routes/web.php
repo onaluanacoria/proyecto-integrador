@@ -11,14 +11,18 @@
 |
 */
 
-// 
-// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/categoria/{id}', 'ProductController@categoria');
+// Route::get('/gift/categories', 'CategoryController@index');
+
+// Route::get('/category/{category_id}', 'CategoryController@index')->name('categories');
+
 Route::get('/', 'ProductController@giftindex')->name('index');
-// Route::get('/', 'CategoryController@index')->name('home');
-// Route::get('/gift/category/{category_id}', 'ProductController@filter');
+
+
 
 Route::get('/gifts', 'ProductController@index')->name('gifts');
-Route::get('/gifts/search','ProductController@search');//buscador
+Route::get('/gifts/search','ProductController@search');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
@@ -34,27 +38,21 @@ Route::get('/gift/{id}', 'ProductController@show'); //Mostramos 1 producto
 
 
 
-Route::get('/gift/categories', 'CategoryController@index');
 // Route::get('/category/{id}', 'CategoryController@show'); //Mostramos 1 producto
 Route::get('/addcategory', 'CategoryController@create');
 Route::post('/addcategory', 'CategoryController@store');//creamos categorias
 Route::get('/deletecategory/{id}','CategoryController@destroy');//eliminamos productos
 
-// Route::get('/category/{id}','CategoryController@categoryProducts');
 
 
 
-Route::get('/aboutUs/{nombre?}', function ($nombre = null) {
-    $equipo = ['Ona Coria', 'Eric Rago', 'Francisco Ochandorena', 'Javier Ter?'];
-    return view('aboutus', compact('equipo', 'nombre'));
-})->name('aboutUs');
+
+
 Route::get('/faqs', 'PagesController@fqaa')->name('FQaA');
 
 
 
 Auth::routes();
-
-Route::get('/welcome', 'HomeController@index')->name('welcome');
 
 Route::middleware(['auth'])->group(function(){
 

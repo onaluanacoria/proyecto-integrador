@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function giftindex()
     {
       $products = Product::all();
-      $categories = Category::all();//Traemos todos los productos.
+      $categories = Category::all();
       return view('index', compact('products', 'categories'));
     }
 
@@ -29,23 +29,33 @@ class ProductController extends Controller
 
     public function index()
     {
-      $products = Product::paginate(10);
+      $products = Product::paginate(9);
       return view('/gifts', compact('products'));
     }
 
     public function show($id)
     {
-      $product = Product::find($id); //Identificamos el producto que queremos mostrar.
-      return view('gift', compact('product')); //Pasamos el dato a la vista.
+      $product = Product::find($id);
+      return view('gift', compact('product'));
     }
 
-    public function filter($id)
-    {
-      $category= Category::find($id);
-      $products = Product::where('categoria_id', $id);
-      dd($products); //Identificamos el producto que queremos mostrar.
-      return view('categories', compact('products', 'category')); //Pasamos el dato a la vista.
-    }
+    public function categoria($id){
+    $products = Product::where('categoria_id', $id)->paginate(5);
+
+    // $productos = Producto::where('categoria_id', $id)->get();
+
+    $category = Category::find($id);
+
+    return view('categories', compact('products', 'category'));
+}
+
+    // public function filter($id)
+    // {
+    //   $category= Category::find($id);
+    //   $products = Product::where('categoria_id', $id);
+    //
+    //   return view('categories', compact('category', 'products'));
+    // }
     /**
      * Show the form for creating a new resource.
      *
@@ -115,10 +125,11 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-     public function update($id){  //Cambie el showform por update{
-       $product = Product::find($id); //Identificamos el producto que queremos mostrar.
+     public function update($id)
+     {
+       $product = Product::find($id);
        $categorias = Category::all();
-       return view('editGift', compact('product', 'categorias')); //Pasamos el dato a la vista.
+       return view('editGift', compact('product', 'categorias'));
      }
     /**
      * Show the form for editing the specified resource.
@@ -155,7 +166,7 @@ class ProductController extends Controller
       $product->price = $req["price"];
       $product->categoria_id = $req['categoria_id'];
       $product->save();
-      return view('gift', compact('product'));
+      return view('/gifts', compact('product'));
     }
 
     /**
