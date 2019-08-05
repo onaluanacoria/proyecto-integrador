@@ -28,9 +28,9 @@ Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
 
 
-Route::get('/cart', 'CartController@index')->middleware(['auth']); //Mostramos el carrito abierto.
-Route::post('/addtocart', 'CartController@store'); //Guardamos productos en tabla cart.
-Route::get('/delete/{id}', 'CartController@destroy'); //Borramos productos del carrito.
+Route::get('/cart', 'CartController@index')->middleware(['auth']);
+Route::post('/addtocart', 'CartController@store')->middleware(['auth']);
+Route::get('/delete/{id}', 'CartController@destroy')->middleware(['auth']);
 
 
 Route::get('/gift/{id}', 'ProductController@show'); //Mostramos 1 producto

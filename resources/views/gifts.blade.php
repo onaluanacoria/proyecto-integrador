@@ -45,6 +45,7 @@
           <section class="row section-products allgifts">
             @foreach ($products as $product)
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
+                
                 <div class="card-body categorias">
                     <a href="#" class="btn btn-primary">{{ !empty ($product->category)? $product->category->name: '' }}</a>
                 </div>

@@ -2,7 +2,7 @@
 @section('principal')
 
   @section("titulo")
-    GiftCompany/mi carrito
+    Mi carrito
   @endsection
 
 <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
@@ -24,21 +24,28 @@
                                 <th scope="col"></th>
                               </tr>
                               <tr>
-                                @foreach ($carts as $item)
+                                @forelse($cart as $item)
                                       <td>{{$item->name}} </td>
                                       <td>{{$item->price}}</td>
                                       <td>  {{$item->quantity}}</td>
                                       <td> {{$item->price * $item->quantity}}</td>
                                       <td>  <a href="/delete/{{$item->id}}">  <img class="lista" src="img/icon/cancel.png" alt=""></a></td>
                               </tr>
-                                @endforeach
+                                @empty
+                                <div class="emty-cart">
+                                  <p>"No añadiste ningún producto"</p>
+                                </div>
+                              @endforelse
 
                                 <tr>
-                                <th scope="row">TOTAL</th>
-                                    <td>-</td>
-                                    <td></td>
-                                  <td><strong>{{$total}}</strong></td>
-                                </tr>
+                                  @if($total != '')
+                                    <th scope="row">TOTAL</th>
+                                        <td>-</td>
+                                        <td></td>
+                                      <td><strong>{{ $total }}</strong></td>
+                                    </tr>
+                                  @endif
+
                           </table>
                       </div>
 

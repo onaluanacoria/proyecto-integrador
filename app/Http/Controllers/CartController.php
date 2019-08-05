@@ -22,19 +22,19 @@ class CartController extends Controller
       if ($userLog == null) {
         return redirect();
       } else {
-      $carts = Cart::where('status',0)
+      $cart = Cart::where('status',0)
       ->where('user_id', Auth::id())
       ->get(); //Identificamos todos los items de los carritos abiertos del usuario logueado.
 
       $total = 0;
-      foreach ($carts as $item) {
-        $total = $total +($item->quantity * $item->price);
+      foreach ($cart as $item) {
+      $total = $total + ($item['price' ]* $item['quantity']);
 
-      return view('/cart', compact('carts', 'total'));
+      return view('/cart', compact('cart', 'total'));
 
     }
   }
-}
+  }
 
     /**
      * Show the form for creating a new resource.
@@ -54,23 +54,21 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request;
-        // ponemos un filtro si el usuario esta logueado
+
         $userLog = Auth::user();
           if ($userLog == null) {
             return redirect("/login");
           } else {
-
+        $cart = new Cart();
         $product = Product::find($request->id);
-        $cart = new Cart(); //Recordar que cada Cart es un item dentro del carrito.
+        $cart->user_id = Auth::id();
+         //Recordar que cada Cart es un item dentro del carrito.
         $cart->name = $product->name;
         $cart->price = $product->price;
         $cart->quantity = $request->quantity;
-        $cart->featured_img = $request->featured_img;
-        $cart->user_id = Auth::id();
-
+        $cart->status = '0';
         $cart->save();
-        return true;
+        return redirect('/');
       }
     }
         /**
@@ -122,11 +120,6 @@ class CartController extends Controller
 
           $item[0]->delete(); //El item está en la posición 0 del array. Lo eliminamos.
 
-          //Otra forma de traer el item a borrar es usando first():
-          // $item = Cart::where('id',$id)
-          // ->where('user_id',Auth::user()->id)
-          // ->where('status',0)->first();
-          // $item->delete();
 
           return redirect('/cart');
       }

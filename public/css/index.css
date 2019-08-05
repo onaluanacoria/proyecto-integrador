@@ -304,8 +304,29 @@ height: auto;
 display: none;
 }
 }
+/*PRODUCTOS EN SUS categorias */
 
+form.categoryAdd button[type='submit']{
+position: absolute;
+left: 28%;
+width: 43%;
+background-color: rgb(104, 125, 222);
+color: black;
+justify-content: center;
+border-radius: 5px;
+padding: 5px;
+font-size: 15px;
+font-family: 'Lobster', sans-serif;
+}
 
+section article img.carrito.category{
+  z-index: 10;
+  left: 81%;
+  top: -3%;
+}
+article.category{
+  padding-bottom: 8%;
+}
 
 
 /* PRODUCTOS DETALLE  */

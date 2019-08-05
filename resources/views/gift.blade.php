@@ -32,7 +32,7 @@
 
                                         </article>
 
-                                        <form class="addcart" action="/addtocart" role="form" method="get">
+                                        <form class="addcart" action="/addtocart" role="form" method="post">
                                             @csrf
                                             <div class="add">
                                               <input type="number" name="quantity" value="1" placeholder="Cantidad">
