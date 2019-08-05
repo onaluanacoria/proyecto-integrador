@@ -13,8 +13,6 @@
 
 
 
-
-
 // INDEX
 Route::get('/', 'ProductController@giftindex')->name('index');
 
