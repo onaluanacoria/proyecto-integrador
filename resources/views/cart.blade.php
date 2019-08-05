@@ -14,7 +14,7 @@
 
               <div class="carts">
                   <div class="buygift">
-                      <h1> Tu carrito<img class="lista" src="img/icon/tranvia.png" alt=""></h1>
+                      <h1> Mi carrito<img class="lista" src="img/icon/tranvia.png" alt=""></h1>
                           <table>
                               <tr>
                                 <th scope="col">Regalo</th>
@@ -37,7 +37,7 @@
                                 </div>
                               @endforelse
 
-                                <tr>
+                                <tr class="total">
                                   @if($total != '')
                                     <th scope="row">TOTAL</th>
                                         <td>-</td>

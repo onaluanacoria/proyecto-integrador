@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 <link rel="stylesheet" href=  "{{asset('css/register.css')}}"/>
 <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 
@@ -57,7 +58,7 @@
                             </div>
                         </div>
 
-                    
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
@@ -94,7 +95,7 @@
 
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-9 offset-md-3">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Registrate') }}
                                 </button>
@@ -114,33 +115,4 @@
           <div class="col-md-6 fondo-register"> </div>
     </div>
 </div>
-<div class="container-fluid footer">
-  <footer class="site-footer">
-        <div class="row">
-      <div class="footer-about col-ls-4 col-md-4">
-          <h3> About<span> GiftCompany </span></h3>
-            <p> Regalá Experiencias, porque los mejores regalos no son cosas, son momentos.</p>
-      </div>
-      <div class="medios-pago col-ls-4 col-md-4">
-          <h3>Medios de <span>Pago</span></h3>
-          <ul>
-            <li><i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i> <i class="fab fa-cc-paypal"></i></li>
-          </ul>
-      </div>
-      <div class="menu col-ls-4 col-md-4">
-        <h3>Redes <span>sociales</span></h3>
-          <div class="redes">
-            <ul>
-            <li class="list-inline-item"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-            <li class="list-inline-item"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i> </a></li>
-            <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> </a></li>
-            <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>  </a></li>
-          </ul>
-          </div>
-      </div>
-
-</div>
-</div>
-<p class="copyrights">Copyright &copy Todos los derechos reservados GiftCompany- 2019</p>
-</footer>
 @endsection

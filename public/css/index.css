@@ -494,20 +494,30 @@ background-size: cover;
 position: relative;
 height: 650px;
 width: 100%;
-
+}
+.cart{
+  font-family: 'Bitter', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
 }
 .cart:before{
   content:"";
   width: 100%;
   height: 650px;
-  background-color: black;
-  opacity: 0.3;
+  background-color: grey;
+  opacity: 0.5;
   position: absolute;
 }
 .carts{
   position: relative;
   left: 50%;
   top: 5%;
+}
+.buygift h1{
+  padding-top: 17px;
+  padding-bottom: 10px;
+  text-decoration: underline;
 }
 .cart h4{
   font-family: 'Lobster', sans-serif;
@@ -519,9 +529,11 @@ width: 100%;
   color:rgb(177, 13, 156);
 }
 table{
-  width: 70%;
+  width: 90%;
   height: 400px;
   padding-left: 10px;
+  position: relative;
+  left: 9%;
 }
 
 .card.carts{
@@ -531,6 +543,11 @@ table{
 .card-body{
   position: relative;
   top: 10%;
+}
+tr.total{
+  font-size: 20px;
+  color: cornsilk;
+  font-family:'Lobster', sans-serif;
 }
 
 /* Regalos Css */
