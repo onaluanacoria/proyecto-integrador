@@ -36,7 +36,7 @@
 
 
     <div class="container part-three">
-       <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts"src="img/icon/regaloAll.png" alt="" ></h1>
+       <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts"src="/img/icon/regaloAll.png" alt="" ></h1>
 
               <p> {{$products-> total()}} Regalos |
                    pagina {{$products->currentPage()}}

@@ -29,13 +29,13 @@
       <nav class="navbar navbar-expand-md navbar-light bg-black shadow-sm" style="z-index: 100;background-color: rgba(255,168, 184, 0.8);">
           <div class="container">
               <a class="navbar-brand" href="{{ url('/') }}">
-                <img class="lista" src="img/icon/regalo (1).png" alt="">  GiftCompany
+                <img class="lista" src="/img/icon/regalo (1).png" alt="">  GiftCompany
               </a>
               <a class ="navbar-brand complements" href="{{ url('/gifts') }}"> Regalos </a>
 
               <a class ="navbar-brand complements" href="{{ url('/faqs') }}"> Preguntas frecuentes </a>
 
-              <a class ="navbar-brand" href="{{ url('/cart') }}"> <img class="lista" src="./img/icon/cart.png" alt=""> </a>
+              <a class ="navbar-brand" href="{{ url('/cart') }}"> <img class="lista" src="/img/icon/cart.png" alt=""> </a>
 
 
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -53,12 +53,12 @@
                       <!-- Authentication Links -->
                       @guest
                           <li class="nav-item">
-                              <a class="nav-link" href="{{ route('login') }}"><img class="lista" src="./img/icon/authorization.png" alt=""> </a>
+                              <a class="nav-link" href="{{ route('login') }}"><img class="lista" src="/img/icon/authorization.png" alt=""> </a>
                           </li>
 
                           @if (Route::has('register'))
                               <li class="nav-item">
-                                  <a class="nav-link" href="{{ route('register') }}"><img class="lista" src="./img/icon/add-user.png" alt=""></a>
+                                  <a class="nav-link" href="{{ route('register') }}"><img class="lista" src="/img/icon/add-user.png" alt=""></a>
                               </li>
 
                           @endif
@@ -110,21 +110,21 @@
       <div class="medios-pago col-ls-4 col-md-4">
           <h3>Medios de <span>Pago</span></h3>
           <ul>
-            <li class="list-inline-item"> <img src="img/payment/visa.png" alt=""> </li>
-              <li class="list-inline-item"> <img src="img/payment/mastercard.png" alt=""> </li>
-                <li class="list-inline-item"> <img src="img/payment/american-express.png" alt=""> </li>
-                  <li class="list-inline-item"> <img src="img/payment/paypal.png" alt=""> </li>
-                    <li class="list-inline-item"> <img src="img/payment/bitcoin.png" alt=""> </li>
+            <li class="list-inline-item"> <img src="/img/payment/visa.png" alt=""> </li>
+              <li class="list-inline-item"> <img src="/img/payment/mastercard.png" alt=""> </li>
+                <li class="list-inline-item"> <img src="/img/payment/american-express.png" alt=""> </li>
+                  <li class="list-inline-item"> <img src="/img/payment/paypal.png" alt=""> </li>
+                    <li class="list-inline-item"> <img src="/img/payment/bitcoin.png" alt=""> </li>
           </ul>
       </div>
       <div class="menu col-ls-4 col-md-4">
         <h3>Redes <span>sociales</span></h3>
           <div class="redes">
             <ul>
-            <li class="list-inline-item"><a href="https://facebook.com" target="_blank"> <img src="img/social/facebook.png" alt=""> </a></li>
-            <li class="list-inline-item"><a href="https://twitter.com" target="_blank"> <img src="img/social/twitter.png" alt=""> </a></li>
-            <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><img src="img/social/instagram.png" alt=""> </a></li>
-            <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"> <img src="img/social/linkedin.png" alt=""></a></li>
+            <li class="list-inline-item"><a href="https://facebook.com" target="_blank"> <img src="/img/social/facebook.png" alt=""> </a></li>
+            <li class="list-inline-item"><a href="https://twitter.com" target="_blank"> <img src="/img/social/twitter.png" alt=""> </a></li>
+            <li class="list-inline-item"><a href="https://instagram.com" target="_blank"><img src="/img/social/instagram.png" alt=""> </a></li>
+            <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"> <img src="/img/social/linkedin.png" alt=""></a></li>
           </ul>
           </div>
       </div>
