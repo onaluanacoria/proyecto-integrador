@@ -45,12 +45,12 @@
 
           <section class="row section-products allgifts">
             @foreach ($products as $product)
-              <article class="category col-9 col-md-6 col-lg-4 col-lg-4>">
+              <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
                 <div class="carritoImg category offset-3">
-                  <img id="carritoIMG" class="carrito category" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
+                  <img id="carrito2" class="carrito category" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
                 </div>
                 <div class="card-body categorias">
-                    <a href="#" class="btn btn-primary">{{ !empty ($product->category)? $product->category->name: '' }}</a>
+                    <a id="categoryTitle" href="#" class="btn btn-primary">{{ !empty ($product->category)? $product->category->name: '' }}</a>
                 </div>
                     <img src="/storage/products/{{$product->featured_img}}" alt="">
                     <h3>{{$product->name}}</h3>

@@ -151,8 +151,8 @@ img.ranking{
   top: -1pc;
 }
 
-.section-products article{
-  padding-bottom: 5%;
+.section-products {
+  padding-bottom: 0%;
 }
 .section-products article img{
   border: none;
@@ -328,6 +328,11 @@ section article img.carrito.category{
   position: relative;
   left: 38%;
   top: 4pc;
+}
+#carrito2{
+  position: relative;
+  left: 38%;
+  top: 7pc;
 }
 
 article.category{
@@ -565,7 +570,7 @@ tr.total{
     height: 300px;
   }
   .section-products.allgifts{
-    padding-bottom: 8%;
+    padding-bottom: 5%;
   }
 
   form.gift-search{
