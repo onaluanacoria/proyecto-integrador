@@ -31,11 +31,13 @@
               <a class="navbar-brand" href="{{ url('/') }}">
                 <img class="lista" src="img/icon/regalo (1).png" alt="">  GiftCompany
               </a>
-              <a class = "navbar-brand" href="{{ url('/gifts') }}"> Regalos </a>
+              <a class ="navbar-brand complements" href="{{ url('/gifts') }}"> Regalos </a>
 
-              <a class = "navbar-brand" href="{{ url('/faqs') }}"> Preguntas frecuentes </a>
+              <a class ="navbar-brand complements" href="{{ url('/faqs') }}"> Preguntas frecuentes </a>
 
-              <a class = "navbar-brand" href="{{ url('/cart') }}"> Mi carrito </a>
+              <a class ="navbar-brand" href="{{ url('/cart') }}"> <img class="lista" src="./img/icon/cart.png" alt=""> </a>
+
+
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                   <span class="navbar-toggler-icon"></span>
               </button>
@@ -51,12 +53,12 @@
                       <!-- Authentication Links -->
                       @guest
                           <li class="nav-item">
-                              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                              <a class="nav-link" href="{{ route('login') }}"><img class="lista" src="./img/icon/authorization.png" alt=""> </a>
                           </li>
 
                           @if (Route::has('register'))
                               <li class="nav-item">
-                                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                  <a class="nav-link" href="{{ route('register') }}"><img class="lista" src="./img/icon/add-user.png" alt=""></a>
                               </li>
 
                           @endif

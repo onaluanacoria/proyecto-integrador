@@ -1,6 +1,5 @@
-// window.onload = function(){
-//
-// console.log(getElementById());
+console.log("hola");
+
 //
 //   switch (category) {
 //     case "Gastronomia": element.style.color = "rgba(169, 229, 227)";
