@@ -47,7 +47,7 @@
             @foreach ($products as $product)
               <article class="category col-9 col-md-6 col-lg-4 col-lg-4>">
                 <div class="carritoImg category offset-3">
-                  <img class="carrito category" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
+                  <img id="carritoIMG" class="carrito category" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
                 </div>
                 <div class="card-body categorias">
                     <a href="#" class="btn btn-primary">{{ !empty ($product->category)? $product->category->name: '' }}</a>

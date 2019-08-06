@@ -105,14 +105,13 @@ GiftCompany
 </div>
 
 <div class="container part-three">
-
    <h1 class="d-flex justify-content-center">Lo mas regalados<img class="ranking "src="img/icon/podio.png" alt=""></h1>
-      <section class="row section-products">
+      <section class="row category section-products">
           @foreach ($products as $product)
             @if($product->productTop())
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
                 <div class="carritoImg category offset-3">
-                  <img class="carrito category" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
+                  <img id="carrito" class="carrito category" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
                 </div>
                     <h2>{{$product->category->name}}</h2>
                       <img src="/storage/products/{{$product->featured_img}}" alt="">

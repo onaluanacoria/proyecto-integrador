@@ -324,6 +324,12 @@ section article img.carrito.category{
   left: 81%;
   top: -3%;
 }
+#carrito{
+  position: relative;
+  left: 38%;
+  top: 4pc;
+}
+
 article.category{
   padding-bottom: 8%;
 }
