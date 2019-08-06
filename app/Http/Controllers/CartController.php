@@ -70,7 +70,7 @@ class CartController extends Controller
         $cart->quantity = $request->quantity;
         $cart->status = '0';
         $cart->save();
-        return redirect('/');
+         return redirect('/gifts');
       }
     }
         /**

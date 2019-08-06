@@ -35,19 +35,6 @@ class ProductController extends Controller
       return view('index', compact('products', 'categories'));
     }
 
-    // public function search(Request $req){
-    // {
-    //     $searchData = '%'. $req["name"] .'%';
-    //
-    //
-    //     }else{
-    //
-    //
-    //   }
-    //
-    //
-    //
-    //   return view('/gifts',compact('products'));
 
 
     public function show($id)
@@ -60,20 +47,9 @@ class ProductController extends Controller
     $products = Product::where('categoria_id', $id)->paginate(5);
     $category = Category::find($id);
     return view('categories', compact('products', 'category'));
-  }
+   }
 
-    // public function filter($id)
-    // {
-    //   $category= Category::find($id);
-    //   $products = Product::where('categoria_id', $id);
-    //
-    //   return view('categories', compact('category', 'products'));
-    // }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         $categorias = Category::all();

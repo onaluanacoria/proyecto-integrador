@@ -90,7 +90,7 @@ GiftCompany
 
     <hr>
 </div>
-      
+
 
 
 
@@ -111,6 +111,9 @@ GiftCompany
           @foreach ($products as $product)
             @if($product->productTop())
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
+                <div class="carritoImg category offset-3">
+                  <img class="carrito category" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
+                </div>
                     <h2>{{$product->category->name}}</h2>
                       <img src="/storage/products/{{$product->featured_img}}" alt="">
                       <h3>{{$product->name}}</h3>

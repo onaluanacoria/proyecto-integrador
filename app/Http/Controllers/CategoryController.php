@@ -68,7 +68,7 @@ class CategoryController extends Controller
 
       $newCategory->save();
 
-      return redirect('/gift/categories');
+      return redirect('/categories');
     }
 
 
