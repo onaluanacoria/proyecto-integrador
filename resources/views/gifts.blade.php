@@ -37,15 +37,16 @@
 
     <div class="container part-three">
        <h1 class="d-flex justify-content-center">Todos los regalos<img class="allgifts"src="img/icon/regaloAll.png" alt="" ></h1>
-         {{-- <p> {{$products-> total()}} Regalos |
-              pagina {{$products->currentPage()}}
-              de {{$products->lastPage()}}
-         </p> --}}
+
+              <p> {{$products-> total()}} Regalos |
+                   pagina {{$products->currentPage()}}
+                   de {{$products->lastPage()}}
+              </p>
 
           <section class="row section-products allgifts">
             @foreach ($products as $product)
               <article class="col-9 col-md-6 col-lg-4 col-lg-4>">
-                
+
                 <div class="card-body categorias">
                     <a href="#" class="btn btn-primary">{{ !empty ($product->category)? $product->category->name: '' }}</a>
                 </div>
@@ -57,7 +58,10 @@
             </article>
           @endforeach
         </section>
-        {{-- {!! $products->render() !!} --}}
+
+            {!! $products->render() !!}
+
+
     </div>
   </body>
 </html>

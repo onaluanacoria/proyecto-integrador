@@ -18,7 +18,7 @@ Route::get('/', 'ProductController@giftindex')->name('index');
 
 // REGALOS
 Route::get('/gifts', 'ProductController@index')->name('gifts');
-Route::get('/gifts/search','ProductController@search')->name('search');
+Route::get('/gifts/search','ProductController@index')->name('search');
 Route::get('/gift/{id}', 'ProductController@show');
 
 //CATEGORIA CON PRODUCTOS

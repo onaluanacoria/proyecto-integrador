@@ -15,10 +15,18 @@ class ProductController extends Controller
      */
 
      public function index()
-     {
-       $products = Product::paginate(9);
-       return view('gifts', compact('products'));
+{
+      $category = Category::all();
+      if (isset($_GET['name'])){
+      $products = Product::where('name','like', '%'. $_GET['name'].'%')
+      ->orderBy('categoria_id', 'desc')
+      ->paginate(3);
+      } else {
+        $products=Product::orderBy('categoria_id', 'desc')
+        ->paginate(9);
      }
+    return view('gifts', compact('products'));
+  }
 
     public function giftindex()
     {
@@ -27,11 +35,20 @@ class ProductController extends Controller
       return view('index', compact('products', 'categories'));
     }
 
-    public function search(Request $req){
-      $searchData = '%'. $req["name"] .'%';
-      $products = Product::where('name','like', $searchData)->get();
-      return view('/gifts',compact('products'));
-    }
+    // public function search(Request $req){
+    // {
+    //     $searchData = '%'. $req["name"] .'%';
+    //
+    //
+    //     }else{
+    //
+    //
+    //   }
+    //
+    //
+    //
+    //   return view('/gifts',compact('products'));
+
 
     public function show($id)
     {

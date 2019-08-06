@@ -29,12 +29,14 @@ class CartController extends Controller
       $total = 0;
       foreach ($cart as $item) {
       $total = $total + ($item['price' ]* $item['quantity']);
+    }
 
       return view('/cart', compact('cart', 'total'));
 
-    }
+
+
   }
-  }
+}
 
     /**
      * Show the form for creating a new resource.
