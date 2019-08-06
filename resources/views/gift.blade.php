@@ -13,9 +13,10 @@
                             <div class="row">
                                 <div class="col-12">
                                   <h1 class="productDetail">Detalle del Regalo<img class="detalle" src="../img/icon/busqueda.png" alt=""> </h1>
-                                  <div class="carritoImg offset-3">
-                                    <img class="carrito" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
-                                  </div>
+                                    <div class="carritoImg offset-3">
+                                      <img class="carrito" src="..\img\icon\carro.png" alt="carrito" onclick ="producto(this)">
+                                    </div>
+
                                       <div class="product">
                                         <img src="/storage/products/{{$product->featured_img}}" alt="">
                                       </div>
