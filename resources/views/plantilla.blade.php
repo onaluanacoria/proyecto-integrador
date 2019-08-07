@@ -35,7 +35,7 @@
 
               <a class ="navbar-brand complements" href="{{ url('/faqs') }}"> Preguntas frecuentes </a>
 
-              <a class ="navbar-brand" href=""> <img id="cart-info" class="cart-info lista" src="/img/icon/cart.png" alt=""> </a>
+              <a class ="navbar-brand" href="{{ url("/cart")}}"> <img id="cart-info" class="lista" src="/img/icon/cart.png" alt=""> </a>
 
 
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

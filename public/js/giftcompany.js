@@ -1,4 +1,3 @@
-window.onload function() {
 function traer() {
   fetch('https://apis.datos.gob.ar/georef/api/provincias')
   .then(response => response.json())
@@ -18,7 +17,7 @@ function traer() {
       console.log(error);
   });
     };
-}
+
 //window.onload
 
   // var productId = img.parentElement.querySelector("input[name=id]").value;

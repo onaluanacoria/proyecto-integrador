@@ -6,7 +6,9 @@
   @endsection
 
 <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js">
 
+</script>
 
   <div class="container cart">
       <div class="row justify-content-center">
@@ -15,7 +17,7 @@
               <div class="carts">
                   <div class="buygift">
                       <h1> Mi carrito<img class="lista" src="img/icon/tranvia.png" alt=""></h1>
-                          <table>
+                          <table class="borrar">
                               <tr>
                                 <th scope="col">Regalo</th>
                                 <th scope="col">Precio</th>
@@ -49,9 +51,30 @@
                           </table>
                       </div>
 
+                          <input id="buyButton" type="submit" name="" value="Comprar" >
+
                     </div>
                 </div>
             </div>
         </div>
+<script>
+            window.onload = function () {
+              var buyGift = document.querySelector('input#buyButton')
+              buyGift.addEventListener('click',function(){
+              $(".borrar").remove();
+              alert("Felicitaciones por su compra")
+              window.location.href = "/"
 
+
+            });
+            }
+
+            //     alert("Elegiste el curso de "+this.children[this.selectedIndex].innerText);
+            //     var curso_id = this.children[this.selectedIndex].getAttribute('value');
+            //     fetch()
+            //     .then()
+            //     .then()
+            //     .catch();
+            // });
+</script>
 @endsection
