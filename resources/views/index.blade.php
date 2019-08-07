@@ -6,6 +6,8 @@
 GiftCompany
 @endsection
   <link rel="stylesheet" href=  "{{asset('css/index.css')}}"/>
+    <script type="text/javascript" src="{{ asset('js/giftcompany.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/validar.js') }}"></script>
 
 
   <div class="container-fluid part-one">

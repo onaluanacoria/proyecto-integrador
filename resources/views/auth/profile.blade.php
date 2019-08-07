@@ -62,6 +62,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group profile row">
+                                              <div class="col-md-6">
+                                                <select id="provincias" class="form-control profile" name="provincias">
+
+                                                </select>
+                                              </div>
+                                        </div>
+                                        <div class="form-group profile row">
                                             <label for="profile_image" class="col-md-4 col-form-label text-md-right">Imagen de Perfil</label>
                                             <div class="col-md-6">
                                                 <input id="profile_image" type="file" class="form-control profile" name="profile_image">
@@ -84,4 +91,14 @@
             </div>
         </div>
     </div>
+<script>
+  var contenido = document.querySelector('#provincias')
+  function provincias() {
+    fetch('https://dev.digitalhouse.com/api/getCursos')
+    .then(response => response.json())
+    .then(data =>{
+      console.log(data)
+    })
+  }
+</script>
 @endsection

@@ -18,7 +18,7 @@ body{
    padding-left: 3%;
    font-size: 17px;
  }
-
+ 
  .container.d-flex{
    padding-bottom: 5%;
  }
@@ -181,6 +181,7 @@ section article img.carrito{
   top: 7px;
   right: 25px;
 }
+
 .part-three{
   padding-top: 5%;
 }
