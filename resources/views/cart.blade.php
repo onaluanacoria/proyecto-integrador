@@ -17,7 +17,7 @@
               <div class="carts">
                   <div class="buygift">
                       <h1> Mi carrito<img class="lista" src="img/icon/tranvia.png" alt=""></h1>
-                          <table class="borrar">
+                          <table class="tableGifts">
                               <tr>
                                 <th scope="col">Regalo</th>
                                 <th scope="col">Precio</th>
@@ -61,20 +61,12 @@
             window.onload = function () {
               var buyGift = document.querySelector('input#buyButton')
               buyGift.addEventListener('click',function(){
-              $(".borrar").remove();
-              alert("Felicitaciones por su compra")
-              window.location.href = "/"
-
-
+              $(".tableGifts").remove();
+              alert("Felicitaciones por su compra, por correo le enviaremos las instrucciones para adquirir su regalo!!")
+              setTimeout("location.href = '/'",1200);
             });
             }
 
-            //     alert("Elegiste el curso de "+this.children[this.selectedIndex].innerText);
-            //     var curso_id = this.children[this.selectedIndex].getAttribute('value');
-            //     fetch()
-            //     .then()
-            //     .then()
-            //     .catch();
-            // });
+
 </script>
 @endsection
