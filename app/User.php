@@ -20,7 +20,7 @@ class User extends Authenticatable
      */
      // agregamos los campos que deseamos que se escriban en base de datos (en este caso last_name)
     protected $fillable = [
-        'name', 'last_name', 'birth_year','email', 'password','profile_image'
+        'name', 'last_name', 'birth_year','email', 'password','profile_image', 'provincias', 'localidad', 'address'
     ];
 
     /**
@@ -45,5 +45,5 @@ class User extends Authenticatable
     {
         return $this->profile_image;
     }
-    
+
 }

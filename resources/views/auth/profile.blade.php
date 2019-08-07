@@ -1,6 +1,48 @@
 @extends('layouts.app')
 
 @section('content')
+  <script>
+
+    function traerProvincias() {
+      fetch('https://apis.datos.gob.ar/georef/api/provincias')
+      .then(response => response.json())
+      .then(function (response) {
+        // console.log(response.provincias)
+        var select = document.querySelector('select#provincias');
+        for(var i = 0; i < response.provincias.length; i++){
+            //console.log(respuesta.data[i].curso);
+            var nombreCurso = response.provincias[i].nombre;
+            var option = document.createElement('option');
+            option.innerText = nombreCurso;
+            option.setAttribute('value',response.provincias[i].id);
+            select.append(option);
+        }
+      })
+      .catch(function(error){
+          console.log(error);
+      })
+
+    }
+
+        // function traerMunicipios(){
+        //     var selectLocalidad = console.log(document.querySelector('select#localidad'));
+        //         console.log(this.selectedIndex)
+        //   })
+
+
+
+
+
+
+
+        // alert("Elegiste el curso de "+this.children[this.selectedIndex].innerText);
+        // var curso_id = this.children[this.selectedIndex].getAttribute('value');
+        // fetch()
+        // .then()
+        // .then()
+
+
+  </script>
 
 <link rel="stylesheet" href=  "{{asset('css/register.css')}}"/>
     <div class="container">
@@ -62,12 +104,27 @@
                                             </div>
                                         </div>
                                         <div class="form-group profile row">
+                                          <label for="provincias" class="col-md-4 col-form-label text-md-right">Provincia</label>
                                               <div class="col-md-6">
-                                                <select id="provincias" class="form-control profile" name="provincias" onclick="traer()">
+                                                <select id="provincias" class="form-control profile" name="provincias" onclick="traerProvincias()" >
 
                                                 </select>
                                               </div>
                                         </div>
+                                        <div class="form-group profile row">
+                                            <label for="localidad" class="col-md-4 col-form-label text-md-right">Localidad</label>
+                                            <div class="col-md-6">
+                                                <input id="localidad" type="text" class="form-control profile" name="localidad" value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group profile row">
+                                            <label for="address" class="col-md-4 col-form-label text-md-right">Dirección</label>
+                                            <div class="col-md-6">
+                                                <input id="address" type="text" class="form-control profile" name="address" value="">
+                                            </div>
+                                        </div>
+
                                         <div class="form-group profile row">
                                             <label for="profile_image" class="col-md-4 col-form-label text-md-right">Imagen de Perfil</label>
                                             <div class="col-md-6">
@@ -91,26 +148,5 @@
             </div>
         </div>
     </div>
-<script>
-function traer() {
-  fetch('https://apis.datos.gob.ar/georef/api/provincias')
-  .then(response => response.json())
-  .then(function (response) {
-    // console.log(response.provincias)
-    var select = document.querySelector('#provincias');
-    for(var i = 0; i < response.provincias.length; i++){
-        //console.log(respuesta.data[i].curso);
-        var nombreCurso = response.provincias[i].nombre;
-        var option = document.createElement('option');
-        option.innerText = nombreCurso;
-        option.setAttribute('value',response.provincias[i].id);
-        select.append(option);
-    }
-  })
-  .catch(function(error){
-      console.log(error);
-  });
-    };
 
-</script>
 @endsection

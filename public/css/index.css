@@ -13,12 +13,26 @@ body{
    font-size: 25px;
  }
 
+ #buyButton{
+   background-color: rgb(251, 113, 123);
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 21px;
+    font-family: 'Lobster', sans-serif;
+    height: 45px;
+    width: 208px;
+    position: relative;
+    left: 7%;
+    top: 11px;
+ }
+
  a.navbar-brand.complements{
    font-family: 'Bitter', sans-serif;
    padding-left: 3%;
    font-size: 17px;
  }
- 
+
  .container.d-flex{
    padding-bottom: 5%;
  }
