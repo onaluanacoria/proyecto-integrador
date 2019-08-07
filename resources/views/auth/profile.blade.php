@@ -61,13 +61,7 @@
                                                 <input id="email" type="text" class="form-control profile" name="email" value="{{ old('email', auth()->user()->email) }}" disabled>
                                             </div>
                                         </div>
-                                        <div class="form-group profile row">
-                                              <div class="col-md-6">
-                                                <select id="provincias" class="form-control profile" name="provincias">
-
-                                                </select>
-                                              </div>
-                                        </div>
+                                        
                                         <div class="form-group profile row">
                                             <label for="profile_image" class="col-md-4 col-form-label text-md-right">Imagen de Perfil</label>
                                             <div class="col-md-6">
