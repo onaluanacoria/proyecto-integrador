@@ -61,7 +61,13 @@
                                                 <input id="email" type="text" class="form-control profile" name="email" value="{{ old('email', auth()->user()->email) }}" disabled>
                                             </div>
                                         </div>
-                                        
+                                        <div class="form-group profile row">
+                                              <div class="col-md-6">
+                                                <select id="provincias" class="form-control profile" name="provincias" onclick="traer()">
+
+                                                </select>
+                                              </div>
+                                        </div>
                                         <div class="form-group profile row">
                                             <label for="profile_image" class="col-md-4 col-form-label text-md-right">Imagen de Perfil</label>
                                             <div class="col-md-6">
@@ -86,13 +92,8 @@
         </div>
     </div>
 <script>
-  var contenido = document.querySelector('#provincias')
-  function provincias() {
-    fetch('https://dev.digitalhouse.com/api/getCursos')
-    .then(response => response.json())
-    .then(data =>{
-      console.log(data)
-    })
-  }
+
+
+
 </script>
 @endsection

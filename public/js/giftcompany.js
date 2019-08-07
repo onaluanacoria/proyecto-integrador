@@ -1,25 +1,24 @@
-
-
-.fetch("https://apis.datos.gob.ar/georef/api", {
-  method: 'POST',
- credentials: "same-origin",
- headers: {
-       "Content-Type": "application/json",
-       "Accept": "application/json",
-       "X-Requested-With": "XMLHttpRequest",
-       "X-CSRF-Token": document.querySelector('select[name="_token"]').value
-     },
- body: formulario
- })
-.then(response => response.json())
-.then(data=> {
-  console.log(data)
-})
-.catch(err->console.log(err))
-
-
-
-
+window.onload function() {
+function traer() {
+  fetch('https://apis.datos.gob.ar/georef/api/provincias')
+  .then(response => response.json())
+  .then(function (response) {
+    // console.log(response.provincias)
+    var select = document.querySelector('#provincias');
+    for(var i = 0; i < response.provincias.length; i++){
+        //console.log(respuesta.data[i].curso);
+        var nombreCurso = response.provincias[i].nombre;
+        var option = document.createElement('option');
+        option.innerText = nombreCurso;
+        option.setAttribute('value',response.provincias[i].id);
+        select.append(option);
+    }
+  })
+  .catch(function(error){
+      console.log(error);
+  });
+    };
+}
 //window.onload
 
   // var productId = img.parentElement.querySelector("input[name=id]").value;
